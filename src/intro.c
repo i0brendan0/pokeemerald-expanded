@@ -1128,6 +1128,10 @@ static u8 SetUpCopyrightScreen(void)
 #endif
         SetSerialCallback(SerialCB_CopyrightScreen);
         GameCubeMultiBoot_Init(&gMultibootProgramStruct);
+#if RHH_COPYRIGHT_INTRO == FALSE
+    case 1: // We need to overwrite REG_DISPCNT the second time, because the intro won't otherwise show on VBA.
+        REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG0_ON;
+#endif // RHH_COPYRIGHT_INTRO
     default:
 #if RHH_COPYRIGHT_INTRO == TRUE
         RunTasks();
@@ -1137,15 +1141,15 @@ static u8 SetUpCopyrightScreen(void)
         break;
     case 30:
         RhhIntro_LoadCopyrightBgGraphics();
-        BeginNormalPaletteFade(0x00000001, 0, 0x10, 0, RGB_BLACK); 
-        UpdatePaletteFade(); 
+        BeginNormalPaletteFade(0x00000001, 0, 0x10, 0, RGB_BLACK);
+        UpdatePaletteFade();
         GameCubeMultiBoot_Main(&gMultibootProgramStruct);
         gMain.state++;
         break;
     case 31:
         RhhIntro_LoadCopyrightSpriteGraphics();
         RhhIntro_CreateCopyRightSprites();
-        UpdatePaletteFade(); 
+        UpdatePaletteFade();
         GameCubeMultiBoot_Main(&gMultibootProgramStruct);
         gMain.state++;
         break;

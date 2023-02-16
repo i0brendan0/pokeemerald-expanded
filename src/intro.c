@@ -1100,6 +1100,7 @@ static u8 SetUpCopyrightScreen(void)
     case 1: // We need to overwrite REG_DISPCNT the second time, because the intro won't otherwise show on VBA.
         REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG0_ON;
     #endif // RHH_COPYRIGHT_INTRO
+    default:
         UpdatePaletteFade();
         gMain.state++;
         GameCubeMultiBoot_Main(&gMultibootProgramStruct);

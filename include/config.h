@@ -36,4 +36,6 @@
 #endif
 #endif
 
+#define RHH_EXPANSION_VERSION   1
+
 #endif // GUARD_CONFIG_H

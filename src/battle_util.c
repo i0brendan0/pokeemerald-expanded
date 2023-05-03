@@ -9232,8 +9232,11 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     switch (GetBattlerAbility(battlerAtk))
     {
     case ABILITY_HUGE_POWER:
-    case ABILITY_PURE_POWER:
         if (IS_MOVE_PHYSICAL(move))
+            MulModifier(&modifier, UQ_4_12(2.0));
+        break;
+    case ABILITY_PURE_POWER:
+        if (IS_MOVE_SPECIAL(move))
             MulModifier(&modifier, UQ_4_12(2.0));
         break;
     case ABILITY_SLOW_START:
@@ -9270,8 +9273,15 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
         break;
     #if B_PLUS_MINUS_INTERACTION >= GEN_5
     case ABILITY_PLUS:
+        if (IS_MOVE_SPECIAL(move) && IsBattlerAlive(BATTLE_PARTNER(battlerAtk)))
+        {
+            u32 partnerAbility = GetBattlerAbility(BATTLE_PARTNER(battlerAtk));
+            if (partnerAbility == ABILITY_PLUS || partnerAbility == ABILITY_MINUS)
+                MulModifier(&modifier, UQ_4_12(1.5));
+        }
+        break;
     case ABILITY_MINUS:
-        if (IsBattlerAlive(BATTLE_PARTNER(battlerAtk)))
+        if (IS_MOVE_PHYSICAL(move) && IsBattlerAlive(BATTLE_PARTNER(battlerAtk)))
         {
             u32 partnerAbility = GetBattlerAbility(BATTLE_PARTNER(battlerAtk));
             if (partnerAbility == ABILITY_PLUS || partnerAbility == ABILITY_MINUS)
@@ -9302,6 +9312,10 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
         break;
     case ABILITY_GUTS:
         if (gBattleMons[battlerAtk].status1 & STATUS1_ANY && IS_MOVE_PHYSICAL(move))
+            MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_CACOPHONY:
+        if (gBattleMoves[move].flags & FLAG_SOUND)
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
     }

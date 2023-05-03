@@ -9,7 +9,7 @@
 
 // Breeding settings
 #define P_NIDORAN_M_DITTO_BREED     GEN_LATEST  // Since Gen 5, when Nidoran♂ breeds with Ditto it can produce Nidoran♀ offspring. Before, it would only yield male offspring. This change also applies to Volbeat.
-#define P_INCENSE_BREEDING          GEN_LATEST  // Since Gen 9, cross-generation Baby Pokémon don't require Incense being held by the parents to be obtained via breeding.
+#define P_INCENSE_BREEDING          GEN_8       // Since Gen 9, cross-generation Baby Pokémon don't require Incense being held by the parents to be obtained via breeding.
 #define P_EGG_HATCH_LEVEL           GEN_LATEST  // Since Gen 4, Pokémon will hatch from eggs at level 1 instead of 5.
 #define P_BALL_INHERITING           GEN_LATEST  // Since Gen 6, Eggs from the Daycare will inherit the Poké Ball from their mother. From Gen7 onwards, the father can pass it down as well, as long as it's of the same species as the mother.
 
@@ -33,9 +33,9 @@
 // If you're disabling a generation previous to others (eg: Gen 5 but not Gen 6, 7 and 8),
 // remember to update NATIONAL_DEX enum in include/constants/pokedex.h to avoid players from softlocking in the non-existant entries.
 #define P_GEN_4_POKEMON             TRUE        // Generation 4 Pokémon (DPPt, HGSS)
-#define P_GEN_5_POKEMON             TRUE        // Generation 5 Pokémon (BW, B2W2)
-#define P_GEN_6_POKEMON             TRUE        // Generation 6 Pokémon (XY, ORAS)
-#define P_GEN_7_POKEMON             TRUE        // Generation 7 Pokémon (SM, USUM, LGPE)
-#define P_GEN_8_POKEMON             TRUE        // Generation 8 Pokémon (SwSh, BDSP, LA)
+#define P_GEN_5_POKEMON             FALSE        // Generation 5 Pokémon (BW, B2W2)
+#define P_GEN_6_POKEMON             FALSE        // Generation 6 Pokémon (XY, ORAS)
+#define P_GEN_7_POKEMON             FALSE        // Generation 7 Pokémon (SM, USUM, LGPE)
+#define P_GEN_8_POKEMON             FALSE        // Generation 8 Pokémon (SwSh, BDSP, LA)
 
 #endif // GUARD_CONFIG_POKEMON_H

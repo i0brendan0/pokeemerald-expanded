@@ -31,16 +31,8 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 				- Fire/Dragon
 			- Arbok
 				- Poison/Dark
-			- Clefairy
-				- Fairy
-			- Clefable
-				- Fairy
 			- Ninetales - Normal Form
 				- Fire/Fairy
-			- Jigglypuff
-				- Normal/Fairy
-			- Wigglytuff
-				- Normal/Fairy
 			- Psyduck
 				- Psychic/Water
 			- Golduck
@@ -51,25 +43,11 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 				- Psychic/Dark
 			- Kangaskhan
 				- Normal/Fighting
-			- Mr. Mime (Barrierd)
-				- Psychic/Fairy
 			- Gyarados
 				- Water/Dragon
 		- Gen 2
-			- Cleffa
-				- Fairy
-			- Igglybuff
-				- Normal/Fairy
-			- Togepi
-				- Fairy
-			- Togetic
-				- Fairy/Flying
 			- Bellossom
 				- Grass/Fairy
-			- Marill
-				- Water/Fairy
-			- Azumarill
-				- Water/Fairy
 			- Sudowoodo
 				- Rock/Fighting
 			- Sunflora
@@ -78,25 +56,11 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 				- Psychic/Ghost
 			- Dunsparce
 				- Normal/Steel
-			- Snubbull
-				- Fairy
-			- Granbull
-				- Fairy
 			- Ursaring
 				- Normal/Fighting
 		- Gen 3
 			- Sceptile
 				- Grass/Dragon
-			- Ralts
-				- Psychic/Fairy
-			- Kirlia
-				- Psychic/Fairy
-			- Gardevoir
-				- Psychic/Fairy
-			- Azurill
-				- Normal/Fairy
-			- Mawile
-				- Normal/Fairy
 			- Manectric
 				- Electric/Dark
 			- Volbeat
@@ -124,12 +88,8 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 				- Electric/Fairy
 			- Lopunny
 				- Normal/Fighting
-			- Mime Jr.
-				- Psychic/Fairy
 			- Carnivine
 				- Grass/Dark
-			- Togekiss
-				- Fairy/Flying
 	- Certain moves have type changes.
 	- Beta mon from previous generations.
 		- Gen 2
@@ -140,7 +100,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 				- Flambear, Volbear, Dynabear
 					- Fire, Fire/???, Fire/???
 			- Beta Water type starter line
-				- Cruz, Aquas, Aquaria
+				- Cruz, Aquis, Aquaria
 					- Water, Water/???, Water/???
 			- Beta Noctowl - Hoothoot split evolution
 				- Owldurn
@@ -232,6 +192,8 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 			- An exotic-smelling incense that makes the holder move first occasionally.
 	- Phione evolves into Manaphy at high friendship.
 - Bug Fixes
+    - RNG will now be seeded like it should.
+    - Landing on grass will show the grass sprites correctly.
 - Changes from Emerald
 	- Shiny odds have been increase by 2x.
 	- Friendship evolutions only need 200 instead of 220.
@@ -239,6 +201,9 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 	- Pure Power now doubles Special Attack instead of Attack. To differentiate from Huge Power.
 	- Minus now raises Attack instead of Special Attack. To differentiate from Plus.
 	- Mr. Mime's name is changed to Barrierd.
+    - Castform shows its shiny color when transformed.
+    - Obedience is increased with each badge.
+    - Pickup table has been modified.
 - Changes from the pokeemerald Expansion
 	- Critical hits do 2x damage. (Gens 1 - 5)
 	- Trainers give boosted EXP. (Gens 1 - 6)

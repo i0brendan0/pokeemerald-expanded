@@ -6630,7 +6630,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                 if (gEvolutionTable[species][i].param <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
-            case EVO_LEVEL_KURSTRAW_PANGSHI:
+            case EVO_KURSTRAW_PANGSHI:
                 if ((level % 10) == 0)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;

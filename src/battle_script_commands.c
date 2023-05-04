@@ -1254,18 +1254,18 @@ static const u16 sPickupItems[] =
     ITEM_GREAT_BALL,
     ITEM_REPEL,
     ITEM_ESCAPE_ROPE,
-    ITEM_X_ATTACK,
+    ITEM_HEART_SCALE,
     ITEM_FULL_HEAL,
     ITEM_ULTRA_BALL,
     ITEM_HYPER_POTION,
     ITEM_RARE_CANDY,
-    ITEM_PROTEIN,
-    ITEM_REVIVE,
     ITEM_HP_UP,
+    ITEM_REVIVE,
+    ITEM_PP_UP,
     ITEM_FULL_RESTORE,
     ITEM_MAX_REVIVE,
-    ITEM_PP_UP,
     ITEM_MAX_ELIXIR,
+    ITEM_MASTER_BALL,
 };
 
 static const u16 sRarePickupItems[] =
@@ -1276,11 +1276,11 @@ static const u16 sRarePickupItems[] =
     ITEM_FULL_RESTORE,
     ITEM_ETHER,
     ITEM_WHITE_HERB,
-    ITEM_TM44_REST,
+    ITEM_TM01_FOCUS_PUNCH,
     ITEM_ELIXIR,
     ITEM_TM01_FOCUS_PUNCH,
     ITEM_LEFTOVERS,
-    ITEM_TM26_EARTHQUAKE,
+    ITEM_TM01_FOCUS_PUNCH,
 };
 
 static const u8 sPickupProbabilities[] =
@@ -14965,17 +14965,63 @@ static void Cmd_pickup(void)
             {
                 s32 j;
                 s32 rand = Random() % 100;
+                u16 k;
 
                 for (j = 0; j < (int)ARRAY_COUNT(sPickupProbabilities); j++)
                 {
                     if (sPickupProbabilities[j] > rand)
                     {
-                        SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sPickupItems[lvlDivBy10 + j]);
+                        k = sPickupItems[lvlDivBy10 + j];
+                        if ((Random() % 20) == 0)
+                        {
+                            static const u16 itemIds[] = {
+                                ITEM_FIRE_STONE,
+                                ITEM_WATER_STONE,
+                                ITEM_THUNDER_STONE,
+                                ITEM_LEAF_STONE,
+                                ITEM_SUN_STONE,
+                                ITEM_MOON_STONE,
+                                ITEM_SHINY_STONE,
+                                ITEM_DUSK_STONE,
+                                ITEM_DAWN_STONE,
+                                ITEM_DRAGON_SCALE,
+                                ITEM_UPGRADE,
+                                ITEM_PROTECTOR,
+                                ITEM_ELECTIRIZER,
+                                ITEM_MAGMARIZER,
+                                ITEM_DUBIOUS_DISC,
+                                ITEM_REAPER_CLOTH,
+                                ITEM_PRISM_SCALE,
+                                ITEM_OVAL_STONE,
+                                ITEM_DEEP_SEA_SCALE,
+                                ITEM_DEEP_SEA_TOOTH,
+                                ITEM_METAL_COAT,
+                                ITEM_KINGS_ROCK,
+                                ITEM_RAZOR_CLAW,
+                                ITEM_RAZOR_FANG,
+                                ITEM_LINK_CABLE,
+                                ITEM_LINK_CABLE};
+                            k = itemIds[Random() % ARRAY_COUNT(itemIds)];
+                        }
+                        else if (k == ITEM_HP_UP)
+                        {
+                            k = (Random() % 6) + ITEM_HP_UP;
+                        }
+                        else if (k == ITEM_PP_UP && ((Random() % 10) == 0))
+                        {
+                            k = ITEM_PP_MAX;
+                        }
+                        SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &k);
                         break;
                     }
                     else if (rand == 99 || rand == 98)
                     {
-                        SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sRarePickupItems[lvlDivBy10 + (99 - rand)]);
+						k = sRarePickupItems[lvlDivBy10 + (99 - rand)];
+						if (k == ITEM_TM01_FOCUS_PUNCH)
+						{
+							k = (Random() % NUM_TECHNICAL_MACHINES) + ITEM_TM01_FOCUS_PUNCH; // random TM
+						}
+                        SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &k);
                         break;
                     }
                 }

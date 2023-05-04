@@ -10,7 +10,7 @@
 // Debug Flags
 // To use the following debug features, replace the 0s with the flag ID you're assigning it to.
 // Eg: Replace with FLAG_UNUSED_0x264 so you can use that flag to toggle the feature.
-#define DEBUG_FLAG_NO_COLLISION         0       // If this flag is set, the debug function in the Utility submenu to disable player collision can be used.
+#define DEBUG_FLAG_NO_COLLISION         FLAG_NO_COLLISION // If this flag is set, the debug function in the Utility submenu to disable player collision can be used.
 
 // Battle Debug Menu
 #define DEBUG_BATTLE_MENU               TRUE    // If set to TRUE, enables a debug menu to use in battles by pressing the Select button.

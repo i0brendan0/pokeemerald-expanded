@@ -23,6 +23,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 		- Currently only the Whismur line has Cacophony as their second ability. 
     - Pokemon that evolve by trade can now evolve through the use a Link Cable.
     - Pokemon that evolve by trade while holding an item can now evolve through the use of a Link Cable while holding that item.
+    - Splash will now do damage based on the user's weight to a random enemy Pokemon when raining.
 - New Features (PENDING)
 	- Castform gets a Sandy Form.
 	- Certain Pokemon have type changes.
@@ -91,6 +92,8 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 			- Carnivine
 				- Grass/Dark
 	- Certain moves have type changes.
+        - Splash
+            - Water
 	- Beta mon from previous generations.
 		- Gen 2
 			- Beta Bayleef

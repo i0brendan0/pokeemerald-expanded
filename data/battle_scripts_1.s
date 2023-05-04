@@ -4424,7 +4424,9 @@ BattleScript_EffectDoNothing::
 	attackcanceler
 	attackstring
 	ppreduce
+    jumpifmove MOVE_SPLASH, BattleScript_CheckRaining
 	jumpifmove MOVE_HOLD_HANDS, BattleScript_EffectHoldHands
+BattleScript_EffectSplashNoRain:
 	attackanimation
 	waitanimation
 	jumpifmove MOVE_CELEBRATE, BattleScript_EffectCelebrate
@@ -4447,6 +4449,14 @@ BattleScript_EffectHappyHour:
 	setmoveeffect MOVE_EFFECT_HAPPY_HOUR
 	seteffectprimary
 	goto BattleScript_MoveEnd
+BattleScript_CheckRaining:
+	accuracycheck BattleScript_EffectSplashNoRain, ACC_CURR_MOVE @ fall through if it's raining and move connects
+	critcalc
+	damagecalc
+	typecalc
+	adjustdamage
+	goto BattleScript_HitFromAtkAnimation
+	
 
 BattleScript_EffectDisable::
 	attackcanceler

@@ -934,7 +934,9 @@
 #define ITEM_COVERT_CLOAK 761
 #define ITEM_LOADED_DICE 762
 
-#define ITEMS_COUNT 763
+#define ITEM_LINK_CABLE 763
+
+#define ITEMS_COUNT 764
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

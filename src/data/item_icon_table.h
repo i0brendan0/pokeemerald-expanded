@@ -808,6 +808,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_PUNCHING_GLOVE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark}, // {gItemIcon_PunchingGlove, gItemIconPalette_PunchingGlove},
     [ITEM_COVERT_CLOAK] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark}, // {gItemIcon_CovertCloak, gItemIconPalette_CovertCloak},
     [ITEM_LOADED_DICE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark}, // {gItemIcon_LoadedDice, gItemIconPalette_LoadedDice},
+    [ITEM_LINK_CABLE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark}, // {gItemIcon_LinkCable, gItemIconPalette_LinkCable},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

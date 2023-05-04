@@ -6630,6 +6630,10 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                 if (gEvolutionTable[species][i].param <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_KURSTRAW_PANGSHI:
+                if ((level % 10) == 0)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
             case EVO_LEVEL_FEMALE:
                 if (gEvolutionTable[species][i].param <= level && GetMonGender(mon) == MON_FEMALE)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
@@ -6813,6 +6817,20 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
             case EVO_ITEM_MALE:
                 if (GetMonGender(mon) == MON_MALE && gEvolutionTable[species][i].param == evolutionItem)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_TRADE:
+                if (evolutionItem == ITEM_LINK_CABLE)
+                {
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                }
+                break;
+            case EVO_TRADE_ITEM:
+                if (evolutionItem == ITEM_LINK_CABLE && gEvolutionTable[species][i].param == heldItem)
+                {
+                    heldItem = ITEM_NONE;
+                    SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                }
                 break;
             }
         }

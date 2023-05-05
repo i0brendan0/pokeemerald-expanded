@@ -21,9 +21,10 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 		- Pokemon with Cacophony do 1.5x damage with sound-based moves.
 		- Pokemon with Cacophony will get a 10% boost to accuracy with sound-based moves. (PENDING)
 		- Currently only the Whismur line has Cacophony as their second ability. 
-    - Pokemon that evolve by trade can now evolve through the use a Link Cable.
+    - Pokemon that evolve by trade can now evolve through the use of a Link Cable.
     - Pokemon that evolve by trade while holding an item can now evolve through the use of a Link Cable while holding that item.
     - Splash will now do damage based on the user's weight to a random enemy Pokemon when raining.
+    - Altering Cave's wild Pokemon changes every day.
 - New Features (PENDING)
 	- Castform gets a Sandy Form.
 	- Certain Pokemon have type changes.
@@ -95,7 +96,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
         - Splash
             - Water
 	- Beta mon from previous generations.
-		- Gen 2
+		- Gen 2 - https://tcrf.net/Proto:Pok%C3%A9mon_Gold_and_Silver/Spaceworld_1997_Demo/Pok%C3%A9mon
 			- Beta Bayleef
 				- Blossomole
 					- Grass/Fairy(?)
@@ -189,6 +190,32 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 			- Beta Porygon2 - Branching evolution for Porygon
 				- Porygon-C
 					- Normal
+        - https://tcrf.net/Proto:Pok%C3%A9mon_Gold_and_Silver/Spaceworld_1999_Demo/Pok%C3%A9mon
+            - Beta Azumarill - Branching evolution for Marill
+                - ???
+                    - Water/Fighting
+            - Beta Dunsparce - Baby Dunsparce?
+                - ???
+                    - Normal
+            - Beta Sneasel
+                - ???
+                    - Ice/Normal
+            - Beta Celebi
+                - ???
+                    - Steel/???
+        - https://tcrf.net/Prerelease:Pok%C3%A9mon_Gold_and_Silver/Sprites/990613
+            - Beta Azumarill - Alternate design for previous
+                - ???
+                    - Water/Fighting
+            - Beta Gligar - Branching evolution for Gligar
+                - ???
+                    - Flying/???
+            - Beta Blissey - Branching evolution for Chansey
+                - ???
+                    - ???
+			- Beta Girafarig pre-evolution - Alternate design for previous
+				- Twinz
+					- Ghost/Fairy
 	- New incense items for use with beta baby mon.
 		- Rich Incense - Meowsy
 			- Provides a Speed boost.
@@ -207,6 +234,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Castform shows its shiny color when transformed.
     - Obedience is increased with each badge.
     - Pickup table has been modified.
+    - Mew and Deoxys will behave normally regardless of how they were obtained.
 - Changes from the pokeemerald Expansion
 	- Critical hits do 2x damage. (Gens 1 - 5)
 	- Trainers give boosted EXP. (Gens 1 - 6)

@@ -42,18 +42,18 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 
 // Modification Flags
-#define FLAG_FORCE_SHINY        0x20
-#define FLAG_FORCE_NOT_SHINY    0x21
-#define FLAG_NO_ENCOUNTER       0x22
-#define FLAG_NO_TRAINER_SEE     0x23
-#define FLAG_NO_COLLISION       0x24
-#define FLAG_INVERSE_BATTLE     0x25
-#define FLAG_FORCE_DOUBLE_WILD  0x26
-#define FLAG_SMART_WILD_AI_FLAG 0x27
-#define FLAG_NO_BAG_USE         0x28
-#define FLAG_NO_CATCHING        0x29
+#define FLAG_FORCE_SHINY          0x20
+#define FLAG_FORCE_NOT_SHINY      0x21
+#define FLAG_NO_ENCOUNTER         0x22
+#define FLAG_NO_TRAINER_SEE       0x23
+#define FLAG_NO_COLLISION         0x24
+#define FLAG_INVERSE_BATTLE       0x25
+#define FLAG_FORCE_DOUBLE_WILD    0x26
+#define FLAG_SMART_WILD_AI_FLAG   0x27
+#define FLAG_NO_BAG_USE           0x28
+#define FLAG_NO_CATCHING          0x29
+#define FLAG_FORCE_HIDDEN_ABILITY 0x2A
 
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag

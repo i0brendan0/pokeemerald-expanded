@@ -20,7 +20,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 	- The unused ability Cacophony has been re-added as an alternative to Punk Rocker.
 		- Pokemon with Cacophony do 1.5x damage with sound-based moves.
 		- Pokemon with Cacophony will get a 10% boost to accuracy with sound-based moves. (PENDING)
-		- Currently only the Whismur line has Cacophony as their second ability. 
+		- Currently only the Whismur and Kricketot line has Cacophony as their second ability. 
     - Pokemon that evolve by trade can now evolve through the use of a Link Cable.
     - Pokemon that evolve by trade while holding an item can now evolve through the use of a Link Cable while holding that item.
     - Splash will now do damage based on the user's weight to a random enemy Pokemon when raining.
@@ -63,6 +63,10 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 		- Gen 3
 			- Sceptile
 				- Grass/Dragon
+            - Skitty
+                - Fairy
+            - Delcatty
+                - Fairy
 			- Manectric
 				- Electric/Dark
 			- Volbeat
@@ -235,6 +239,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Obedience is increased with each badge.
     - Pickup table has been modified.
     - Mew and Deoxys will behave normally regardless of how they were obtained.
+    - The number of spots Feebas can be found has been doubled.
 - Changes from the pokeemerald Expansion
 	- Critical hits do 2x damage. (Gens 1 - 5)
 	- Trainers give boosted EXP. (Gens 1 - 6)

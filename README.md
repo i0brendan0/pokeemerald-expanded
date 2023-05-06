@@ -25,6 +25,8 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Pokemon that evolve by trade while holding an item can now evolve through the use of a Link Cable while holding that item.
     - Splash will now do damage based on the user's weight to a random enemy Pokemon when raining.
     - Altering Cave's wild Pokemon changes every day.
+    - Stats that change from a Pokemon's nature will be shaded.
+	- Phione evolves into Manaphy at high friendship.
 - New Features (PENDING)
 	- Castform gets a Sandy Form.
 	- Certain Pokemon have type changes.
@@ -224,10 +226,11 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 		- Rich Incense - Meowsy
 			- Provides a Speed boost.
 			- An exotic-smelling incense that makes the holder move first occasionally.
-	- Phione evolves into Manaphy at high friendship.
 - Bug Fixes
     - RNG will now be seeded like it should.
     - Landing on grass will show the grass sprites correctly.
+    - Pokedex entries will not show without the Pokedex.
+    - The snow weather has been fixed.
 - Changes from Emerald
 	- Shiny odds have been increase by 2x.
 	- Friendship evolutions only need 200 instead of 220.
@@ -240,6 +243,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Pickup table has been modified.
     - Mew and Deoxys will behave normally regardless of how they were obtained.
     - The number of spots Feebas can be found has been doubled.
+    - More bag space. 120 spots now.
 - Changes from the pokeemerald Expansion
 	- Critical hits do 2x damage. (Gens 1 - 5)
 	- Trainers give boosted EXP. (Gens 1 - 6)
@@ -272,6 +276,8 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 	- Health recovery items heal as they would pre-Gen 7.
 	- Incense items work as they would normally.
 		- New items will be added for use with Beta Mon.
+
+Use MODIFY to find changes for future.
 	
 ### [Documentation on features can be found here for the pokeemerald Expansion](https://github.com/rh-hideout/pokeemerald-expansion/wiki)
 

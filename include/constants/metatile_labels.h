@@ -211,8 +211,8 @@
 #define METATILE_General_CaveEntrance_Bottom      0x0A7
 #define METATILE_General_CaveEntrance_Top         0x09F
 #define METATILE_General_ChangeDeoxysFormAttack   0x05C
-#define METATILE_General_ChangeDeoxysFormDefense  0x135
-#define METATILE_General_ChangeDeoxysFormNormal   0x02A
+#define METATILE_General_ChangeDeoxysFormDefense  0x02A
+#define METATILE_General_ChangeDeoxysFormNormal   0x135
 #define METATILE_General_ChangeDeoxysFormSpeed    0x13F
 #define METATILE_General_Door                     0x021
 #define METATILE_General_Door_Contest             0x1DB

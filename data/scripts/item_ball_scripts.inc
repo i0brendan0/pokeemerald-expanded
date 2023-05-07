@@ -242,16 +242,8 @@ Route123_EventScript_ItemRevivalHerb::
 	finditem ITEM_REVIVAL_HERB
 	end
 
-Route124_EventScript_ItemRedShard::
-	finditem ITEM_RED_SHARD
-	end
-
 Route124_EventScript_ItemBlueShard::
 	finditem ITEM_BLUE_SHARD
-	end
-
-Route124_EventScript_ItemYellowShard::
-	finditem ITEM_YELLOW_SHARD
 	end
 
 Route125_EventScript_ItemBigPearl::
@@ -656,4 +648,9 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
+	end
+
+Common_EventScript_FindItem::
+    callnative GetPokeballItemAndCount
+	callstd STD_FIND_ITEM
 	end

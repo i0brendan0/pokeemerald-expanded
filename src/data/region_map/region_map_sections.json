@@ -531,7 +531,6 @@
     {
       "map_section": "MAPSEC_AQUA_HIDEOUT_OLD",
       "name": "{AQUA} HIDEOUT",
-      "name_clone": true,
       "x": 19,
       "y": 3,
       "width": 1,
@@ -796,7 +795,6 @@
     {
       "map_section": "MAPSEC_ROUTE_4_POKECENTER",
       "name": "ROUTE 4",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -805,7 +803,6 @@
     {
       "map_section": "MAPSEC_ROUTE_10_POKECENTER",
       "name": "ROUTE 10",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1046,7 +1043,6 @@
     {
       "map_section": "MAPSEC_UNDERGROUND_PATH_2",
       "name": "UNDERGROUND PATH",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1063,7 +1059,6 @@
     {
       "map_section": "MAPSEC_KANTO_VICTORY_ROAD",
       "name": "VICTORY ROAD",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1096,7 +1091,6 @@
     {
       "map_section": "MAPSEC_KANTO_SAFARI_ZONE",
       "name": "SAFARI ZONE",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1441,7 +1435,6 @@
     {
       "map_section": "MAPSEC_TRAINER_TOWER_2",
       "name": "TRAINER TOWER",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1708,6 +1701,214 @@
       "name": "TRAINER HILL",
       "x": 8,
       "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_135",
+      "name": "ROUTE 135",
+      "x": 6,
+      "y": 9,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_136",
+      "name": "ROUTE 136",
+      "x": 6,
+      "y": 11,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_137",
+      "name": "ROUTE 137",
+      "x": 5,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_138",
+      "name": "ROUTE 138",
+      "x": 4,
+      "y": 1,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_139",
+      "name": "ROUTE 139",
+      "x": 3,
+      "y": 2,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_NEW_TOWN_1",
+      "name": "NEW TOWN 1",
+      "x": 2,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_AREA_1",
+      "name": "NEW AREA 1",
+      "x": 9,
+      "y": 1,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_140",
+      "name": "ROUTE 140",
+      "x": 17,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_141",
+      "name": "ROUTE 141",
+      "x": 18,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_NEW_TOWN_2",
+      "name": "NEW TOWN 2",
+      "x": 18,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_142",
+      "name": "ROUTE 142",
+      "x": 18,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_143",
+      "name": "ROUTE 143",
+      "x": 19,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_144",
+      "name": "ROUTE 144",
+      "x": 17,
+      "y": 8,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_145",
+      "name": "ROUTE 145",
+      "x": 15,
+      "y": 8,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_146",
+      "name": "ROUTE 146",
+      "x": 13,
+      "y": 8,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_147",
+      "name": "ROUTE 147",
+      "x": 12,
+      "y": 8,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_NEW_ISLAND_1",
+      "name": "NEW ISLAND 1",
+      "x": 10,
+      "y": 8,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_148",
+      "name": "ROUTE 148",
+      "x": 15,
+      "y": 11,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_149",
+      "name": "ROUTE 149",
+      "x": 13,
+      "y": 12,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_NEW_ISLAND_2",
+      "name": "NEW ISLAND 2",
+      "x": 12,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_150",
+      "name": "ROUTE 150",
+      "x": 14,
+      "y": 1,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_151",
+      "name": "ROUTE 151",
+      "x": 16,
+      "y": 1,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_152",
+      "name": "ROUTE 152",
+      "x": 18,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_153",
+      "name": "ROUTE 153",
+      "x": 17,
+      "y": 11,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_154",
+      "name": "ROUTE 154",
+      "x": 18,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_NEW_FOREST",
+      "name": "NEW FOREST",
+      "x": 19,
+      "y": 12,
       "width": 1,
       "height": 1
     }

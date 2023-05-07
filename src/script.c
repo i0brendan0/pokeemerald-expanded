@@ -468,3 +468,14 @@ void InitRamScript_NoObjectEvent(u8 *script, u16 scriptSize)
         scriptSize = sizeof(gSaveBlock1Ptr->ramScript.data.script);
     InitRamScript(script, scriptSize, MAP_GROUP(UNDEFINED), MAP_NUM(UNDEFINED), NO_OBJECT);
 }
+
+void GetPokeballItemAndCount(void)
+{
+    gSpecialVar_0x8000 = gMapHeader.events->objectEvents[gSpecialVar_LastTalked - 1].trainerRange_berryTreeId;
+    if (gMapHeader.events->objectEvents[gSpecialVar_LastTalked - 1].movementRangeX != 0)
+        gSpecialVar_0x8001 = gMapHeader.events->objectEvents[gSpecialVar_LastTalked - 1].movementRangeX;
+    else if (gMapHeader.events->objectEvents[gSpecialVar_LastTalked - 1].movementRangeY != 0)
+        gSpecialVar_0x8001 = gMapHeader.events->objectEvents[gSpecialVar_LastTalked - 1].movementRangeY;
+    else
+        gSpecialVar_0x8001 = 1;
+}

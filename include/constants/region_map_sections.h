@@ -214,7 +214,42 @@
 #define MAPSEC_ALTERING_CAVE                0xD2
 #define MAPSEC_NAVEL_ROCK                   0xD3
 #define MAPSEC_TRAINER_HILL                 0xD4
-#define MAPSEC_NONE                         0xD5
+// NEW LOCATIONS
+// East of Littleroot Town
+#define MAPSEC_ROUTE_135                    0xD5
+#define MAPSEC_ROUTE_136                    0xD6
+#define MAPSEC_ROUTE_137                    0xD7
+// South of Fallarbor Town
+#define MAPSEC_ROUTE_138                    0xD8
+#define MAPSEC_ROUTE_139                    0xD9
+#define MAPSEC_NEW_TOWN_1                   0xDA
+// West of Fortree City
+#define MAPSEC_AREA_1                       0xDB
+// South of Lilycove City
+#define MAPSEC_ROUTE_140                    0xDC
+#define MAPSEC_ROUTE_141                    0xDD
+#define MAPSEC_NEW_TOWN_2                   0xDE
+#define MAPSEC_ROUTE_142                    0xDF
+// West of Sootopolis City
+#define MAPSEC_ROUTE_143                    0xE0
+#define MAPSEC_ROUTE_144                    0xE1
+#define MAPSEC_ROUTE_145                    0xE2
+#define MAPSEC_ROUTE_146                    0xE3
+#define MAPSEC_ROUTE_147                    0xE4
+#define MAPSEC_NEW_ISLAND_1                 0xE5
+// North of Southern Island
+#define MAPSEC_ROUTE_148                    0xE6
+#define MAPSEC_ROUTE_149                    0xE7
+#define MAPSEC_NEW_ISLAND_2                 0xE8
+// East of Fortree City
+#define MAPSEC_ROUTE_150                    0xE9
+#define MAPSEC_ROUTE_151                    0xEA
+#define MAPSEC_ROUTE_152                    0xEB
+// South of Pacifidlog Town
+#define MAPSEC_ROUTE_153                    0xEC
+#define MAPSEC_ROUTE_154                    0xED
+#define MAPSEC_NEW_FOREST                   0xEE
+#define MAPSEC_NONE                         0xEF
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

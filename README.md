@@ -19,14 +19,18 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 - New Features (COMPLETED)
 	- The unused ability Cacophony has been re-added as an alternative to Punk Rocker.
 		- Pokemon with Cacophony do 1.5x damage with sound-based moves.
-		- Pokemon with Cacophony will get a 10% boost to accuracy with sound-based moves. (PENDING)
+		- Pokemon with Cacophony will get a 10% boost to accuracy with sound-based moves.
 		- Currently only the Whismur and Kricketot line has Cacophony as their second ability. 
     - Pokemon that evolve by trade can now evolve through the use of a Link Cable.
     - Pokemon that evolve by trade while holding an item can now evolve through the use of a Link Cable while holding that item.
-    - Splash will now do damage based on the user's weight to a random enemy Pokemon when raining.
     - Altering Cave's wild Pokemon changes every day.
     - Stats that change from a Pokemon's nature will be shaded.
 	- Phione evolves into Manaphy at high friendship.
+    - Certain Pokeballs in the world will give a higher amount of that item.
+	- Certain moves have type changes.
+        - Splash
+            - Water
+            - Does damage during rain based on the user's weight.
 - New Features (PENDING)
 	- Castform gets a Sandy Form.
 	- Certain Pokemon have type changes.
@@ -98,9 +102,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 				- Normal/Fighting
 			- Carnivine
 				- Grass/Dark
-	- Certain moves have type changes.
-        - Splash
-            - Water
+
 	- Beta mon from previous generations.
 		- Gen 2 - https://tcrf.net/Proto:Pok%C3%A9mon_Gold_and_Silver/Spaceworld_1997_Demo/Pok%C3%A9mon
 			- Beta Bayleef
@@ -197,27 +199,24 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 				- Porygon-C
 					- Normal
         - https://tcrf.net/Proto:Pok%C3%A9mon_Gold_and_Silver/Spaceworld_1999_Demo/Pok%C3%A9mon
-            - Beta Azumarill - Branching evolution for Marill
-                - ???
-                    - Water/Fighting
             - Beta Dunsparce - Baby Dunsparce?
                 - ???
                     - Normal
             - Beta Sneasel
-                - ???
+                - Swievel
                     - Ice/Normal
             - Beta Celebi
                 - ???
                     - Steel/???
         - https://tcrf.net/Prerelease:Pok%C3%A9mon_Gold_and_Silver/Sprites/990613
-            - Beta Azumarill - Alternate design for previous
+            - Beta Azumarill - Branching evolution for Marill
                 - ???
                     - Water/Fighting
             - Beta Gligar - Branching evolution for Gligar
                 - ???
                     - Flying/???
             - Beta Blissey - Branching evolution for Chansey
-                - ???
+                - Whimsey
                     - ???
 			- Beta Girafarig pre-evolution - Alternate design for previous
 				- Twinz
@@ -231,6 +230,9 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Landing on grass will show the grass sprites correctly.
     - Pokedex entries will not show without the Pokedex.
     - The snow weather has been fixed.
+    
+## Changes
+
 - Changes from Emerald
 	- Shiny odds have been increase by 2x.
 	- Friendship evolutions only need 200 instead of 220.
@@ -241,6 +243,12 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Castform shows its shiny color when transformed.
     - Obedience is increased with each badge.
     - Pickup table has been modified.
+        - Due to this change and that plenty of useful items are now possible to get from Pickup, some pokemon get the Pickup ability.
+            - Vulpix line
+            - Phanpy line
+            - Plusle and Minun
+            - Starly line (change to just Starly)
+            - Manaphy and Phione
     - Mew and Deoxys will behave normally regardless of how they were obtained.
     - The number of spots Feebas can be found has been doubled.
     - More bag space. 120 spots now.
@@ -276,6 +284,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 	- Health recovery items heal as they would pre-Gen 7.
 	- Incense items work as they would normally.
 		- New items will be added for use with Beta Mon.
+    - Rotom's normal form has modified base stats. Closer total to the forms.
 
 Use MODIFY to find changes for future.
 	

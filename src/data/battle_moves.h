@@ -2694,16 +2694,16 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
 
     [MOVE_SPLASH] =
     {
-        .effect = EFFECT_DO_NOTHING,
-        .power = 0,
+        .effect = EFFECT_SPLASH,
+        .power = 1,
         .type = TYPE_WATER,
-        .accuracy = 0,
+        .accuracy = 100,
         .pp = 40,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_RANDOM,
         .priority = 0,
-        .flags = 0,
-        .split = SPLIT_STATUS,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+        .split = SPLIT_PHYSICAL,
         .zMovePower = 0,
         .zMoveEffect = Z_EFFECT_ATK_UP_3,
     },

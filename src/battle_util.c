@@ -8639,9 +8639,7 @@ static u16 CalcMoveBasePower(u16 move, u8 battlerAtk, u8 battlerDef)
         else
             basePower = 120;
         break;
-    case EFFECT_DO_NOTHING:
-        if (move != MOVE_SPLASH)
-            break;
+    case EFFECT_SPLASH:
         weight = GetBattlerWeight(battlerAtk);
         for (i = 0; sWeightToDamageTable[i] != 0xFFFF; i += 2)
         {

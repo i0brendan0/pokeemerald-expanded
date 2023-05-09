@@ -2472,6 +2472,12 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         case EFFECT_DO_NOTHING:
             score -= 10;
             break;
+        case EFFECT_SPLASH:
+            if (gBattleWeather & B_WEATHER_RAIN)
+                score++;
+            else
+                score -= 10;
+            break;
         case EFFECT_INSTRUCT:
             {
                 u16 instructedMove;

@@ -417,6 +417,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectVictoryDance            @ EFFECT_VICTORY_DANCE
 	.4byte BattleScript_EffectTeatime                 @ EFFECT_TEATIME
 	.4byte BattleScript_EffectAttackUpUserAlly        @ EFFECT_ATTACK_UP_USER_ALLY
+	.4byte BattleScript_EffectSplash                  @ EFFECT_SPLASH
 	
 BattleScript_EffectAttackUpUserAlly:
 	jumpifnoally BS_ATTACKER, BattleScript_EffectAttackUp
@@ -3140,6 +3141,7 @@ BattleScript_HitFromCritCalc::
 BattleScript_HitFromAtkAnimation::
 	attackanimation
 	waitanimation
+BattleScript_SplashHit::
 	effectivenesssound
 	hitanimation BS_TARGET
 	waitstate
@@ -4426,14 +4428,11 @@ BattleScript_EffectDoNothing::
 	ppreduce
     jumpifmove MOVE_SPLASH, BattleScript_CheckRaining
 	jumpifmove MOVE_HOLD_HANDS, BattleScript_EffectHoldHands
-BattleScript_EffectSplashNoRain:
 	attackanimation
 	waitanimation
 	jumpifmove MOVE_CELEBRATE, BattleScript_EffectCelebrate
-	jumpifmove MOVE_HAPPY_HOUR, BattleScript_EffectHappyHour
-	incrementgamestat GAME_STAT_USED_SPLASH
-	printstring STRINGID_BUTNOTHINGHAPPENED
-	waitmessage B_WAIT_TIME_LONG
+	setmoveeffect MOVE_EFFECT_HAPPY_HOUR
+	seteffectprimary
 	goto BattleScript_MoveEnd
 BattleScript_EffectHoldHands:
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_CRAFTY_SHIELD, BattleScript_ButItFailed
@@ -4445,17 +4444,6 @@ BattleScript_EffectCelebrate:
 	printstring STRINGID_CELEBRATEMESSAGE
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
-BattleScript_EffectHappyHour:
-	setmoveeffect MOVE_EFFECT_HAPPY_HOUR
-	seteffectprimary
-	goto BattleScript_MoveEnd
-BattleScript_CheckRaining:
-	accuracycheck BattleScript_EffectSplashNoRain, ACC_CURR_MOVE @ fall through if it's raining and move connects
-	critcalc
-	damagecalc
-	typecalc
-	adjustdamage
-	goto BattleScript_HitFromAtkAnimation
 	
 
 BattleScript_EffectDisable::
@@ -5691,7 +5679,7 @@ BattleScript_EffectMementoPrintNoEffect:
 	printstring STRINGID_BUTNOEFFECT
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_EffectMementoTryFaint
-@ If the target is protected there's no need to check the target's stats or animate, the user will just faint
+@ If the target is protected theres no need to check the targets stats or animate, the user will just faint
 BattleScript_MementoTargetProtect:
 	attackstring
 	ppreduce
@@ -8365,7 +8353,7 @@ BattleScript_SpeedBoostActivates::
 	waitmessage B_WAIT_TIME_LONG
 	end3
 
-@ Can't compare directly to a value, have to compare to value at pointer
+@ Cant compare directly to a value, have to compare to value at pointer
 sZero:
 .byte 0
 
@@ -9284,7 +9272,7 @@ BattleScript_RoughSkinActivates::
 	return
 
 BattleScript_RockyHelmetActivates::
-	@ don't play the animation for a fainted mon
+	@ dont play the animation for a fainted mon
 	jumpifabsent BS_TARGET, BattleScript_RockyHelmetActivatesDmg
 	playanimation BS_TARGET, B_ANIM_HELD_ITEM_EFFECT
 	waitanimation
@@ -10310,3 +10298,22 @@ BattleScript_PokemonCantUseTheMove::
 	printstring STRINGID_BUTPOKEMONCANTUSETHEMOVE
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectSplash::
+    attackcanceler
+    attackstring
+    ppreduce
+    attackanimation
+    waitanimation
+	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_RAIN, BattleScript_RainingSplash
+BattleScript_SplashMisses:
+	incrementgamestat GAME_STAT_USED_SPLASH
+	printstring STRINGID_BUTNOTHINGHAPPENED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+BattleScript_RainingSplash:
+	accuracycheck BattleScript_SplashMisses, ACC_CURR_MOVE
+	critcalc
+	damagecalc
+	adjustdamage
+	goto BattleScript_SplashHit

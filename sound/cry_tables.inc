@@ -2119,6 +2119,56 @@ gCryTable::
 	cry Cry_Unown
 	cry Cry_Unown
 .endif
+    cry Cry_Anchorage
+    cry Cry_Animon
+    cry Cry_Aquaria
+    cry Cry_Aquis
+    cry Cry_Belloyant
+    cry Cry_Belmitt
+    cry Cry_Blossomole
+    cry Cry_Bomsoaker
+    cry Cry_Chiks
+    cry Cry_Cottoneko
+    cry Cry_Cruz
+    cry Cry_Dandeneko
+    cry Cry_Dynabear
+    cry Cry_Flambear
+    cry Cry_Gohng
+    cry Cry_Golpy
+    cry Cry_Grimey
+    cry Cry_Grotess
+    cry Cry_Kotora
+    cry Cry_Kurstraw
+    cry Cry_Lefneko
+    cry Cry_Madame
+    cry Cry_Meowsy
+    cry Cry_Minicorn
+    cry Cry_Numpuff
+    cry Cry_Owldurn
+    cry Cry_Pangshi
+    cry Cry_Para
+    cry Cry_Plux
+    cry Cry_Porygon_C
+    cry Cry_Puddi
+    cry Cry_Raitora
+    cry Cry_Rayleep
+    cry Cry_Rinring
+    cry Cry_Sunmola
+    cry Cry_Swievel
+    cry Cry_Tangel
+    cry Cry_Tangrath
+    cry Cry_Trifox
+    cry Cry_Turbann
+    cry Cry_Twinz
+    cry Cry_Volbear
+    cry Cry_Warwolf
+    cry Cry_Whimsey
+    cry Cry_Wolfman
+    cry Cry_x_Azumarill_x
+    cry Cry_x_Celebi_x
+    cry Cry_x_Dunsparce_x
+    cry Cry_x_Gligar_x
+    cry Cry_x_Wooper_x
 
 	.align 2
 gCryTable_Reverse::
@@ -4188,3 +4238,53 @@ gCryTable_Reverse::
 	cry_reverse Cry_Unown
 	cry_reverse Cry_Unown
 .endif
+    cry_reverse Cry_Anchorage
+    cry_reverse Cry_Animon
+    cry_reverse Cry_Aquaria
+    cry_reverse Cry_Aquis
+    cry_reverse Cry_Belloyant
+    cry_reverse Cry_Belmitt
+    cry_reverse Cry_Blossomole
+    cry_reverse Cry_Bomsoaker
+    cry_reverse Cry_Chiks
+    cry_reverse Cry_Cottoneko
+    cry_reverse Cry_Cruz
+    cry_reverse Cry_Dandeneko
+    cry_reverse Cry_Dynabear
+    cry_reverse Cry_Flambear
+    cry_reverse Cry_Gohng
+    cry_reverse Cry_Golpy
+    cry_reverse Cry_Grimey
+    cry_reverse Cry_Grotess
+    cry_reverse Cry_Kotora
+    cry_reverse Cry_Kurstraw
+    cry_reverse Cry_Lefneko
+    cry_reverse Cry_Madame
+    cry_reverse Cry_Meowsy
+    cry_reverse Cry_Minicorn
+    cry_reverse Cry_Numpuff
+    cry_reverse Cry_Owldurn
+    cry_reverse Cry_Pangshi
+    cry_reverse Cry_Para
+    cry_reverse Cry_Plux
+    cry_reverse Cry_Porygon_C
+    cry_reverse Cry_Puddi
+    cry_reverse Cry_Raitora
+    cry_reverse Cry_Rayleep
+    cry_reverse Cry_Rinring
+    cry_reverse Cry_Sunmola
+    cry_reverse Cry_Swievel
+    cry_reverse Cry_Tangel
+    cry_reverse Cry_Tangrath
+    cry_reverse Cry_Trifox
+    cry_reverse Cry_Turbann
+    cry_reverse Cry_Twinz
+    cry_reverse Cry_Volbear
+    cry_reverse Cry_Warwolf
+    cry_reverse Cry_Whimsey
+    cry_reverse Cry_Wolfman
+    cry_reverse Cry_x_Azumarill_x
+    cry_reverse Cry_x_Celebi_x
+    cry_reverse Cry_x_Dunsparce_x
+    cry_reverse Cry_x_Gligar_x
+    cry_reverse Cry_x_Wooper_x

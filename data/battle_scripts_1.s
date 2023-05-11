@@ -4426,7 +4426,6 @@ BattleScript_EffectDoNothing::
 	attackcanceler
 	attackstring
 	ppreduce
-    jumpifmove MOVE_SPLASH, BattleScript_CheckRaining
 	jumpifmove MOVE_HOLD_HANDS, BattleScript_EffectHoldHands
 	attackanimation
 	waitanimation

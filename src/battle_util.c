@@ -8077,8 +8077,6 @@ u8 IsMonDisobedient(void)
     if (!IsOtherTrainer(gBattleMons[gBattlerAttacker].otId, gBattleMons[gBattlerAttacker].otName))
         levelReferenced = gBattleMons[gBattlerAttacker].metLevel;
     else
-#else
-    if (gBattleMons[gBattlerAttacker].level <= obedienceLevel)
 #endif
         levelReferenced = gBattleMons[gBattlerAttacker].level;
 

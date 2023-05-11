@@ -112,16 +112,16 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
             - Beta Bayleef
                 - Blossomole
                     - Grass/Fairy(?)
-            - Beta Fire type starter line
+            - -Beta Fire type starter line - New Fire starter
                 - Flambear, Volbear, Dynabear
                     - Fire, Fire/???, Fire/???
-            - Beta Water type starter line
+            - -Beta Water type starter line - New Water starter
                 - Cruz, Aquis, Aquaria
                     - Water, Water/???, Water/???
-            - Beta Noctowl - Hoothoot split evolution
+            - Beta Noctowl - Hoothoot split evolution - Use Wurmple's evolution
                 - Owldurn
                     - Normal/Flying
-            - Beta Vulpix baby
+            - -Beta Vulpix baby
                 - Trifox
                     - Fire
             - Beta Tangela baby
@@ -130,13 +130,13 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
             - Beta Tangrowth - Tangela split evolution
                 - Tangrath
                     - Grass/Fighting(?)
-            - Beta Mantine
+            - -Beta Mantine
                 - Rayleep
                     - Water/Fairy(?)
             - Beta Qwilfish evolution
                 - Numpuff
                     - Water/Poison
-            - Beta Goldeen baby
+            - -Beta Goldeen baby
                 - Golpy
                     - Water
             - Beta sunfish line 
@@ -145,78 +145,75 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
             - Beta Paras baby
                 - Para
                     - Bug/Grass
-            - Beta Ditto evolution
+            - Beta Ditto evolution - Metal Coat + Trade
                 - Animon
-                    - ???
-            - Beta Doduo baby
+                    - Normal/Steel
+            - -Beta Doduo baby
                 - Chiks
                     - Normal/Flying
-            - Beta Girafarig pre-evolution
-                - Twinz
-                    - Ghost/Fairy
-            - Beta Meowth baby
+            - -Beta Meowth baby
                 - Meowsy
                     - Normal
-            - Beta dark cat line
+            - -Beta dark cat line
                 - Rinring, Belloyant
-                    - Dark/Fairy, Dark/Fairy
+                    - Dark/Fairy(?), Dark/Fairy(?)
             - Beta Ponyta baby
                 - Minicorn
                     - Fire
             - Beta Slowbro shell pokemon
                 - Turbann
                     - Rock(?)
-            - Beta Grimer baby
+            - -Beta Grimer baby
                 - Grimey
                     - Poison
             - Beta Tyrogue
                 - Gohng
                     - Fighting/Fairy(?)
-            - Beta Growlithe baby
+            - -Beta Growlithe baby
                 - Puddi
                     - Fire
-            - Beta Hoppip line
-                - Lefneko, Dandeneko, Cottoneko
+            - -Beta Hoppip line
+                - Lefneko, Dandeneko, Cottoneko - New Grass starter
                     - Grass/Fairy, Grass/Fairy, Grass/Fairy
-            - Beta Weepinbell branching evolution
+            - Beta Weepinbell branching evolution - Moon Stone
                 - Belmitt
                     - Grass/Dark(?)
-            - Beta seal Pokemon
+            - -Beta seal Pokemon
                 - Bomsoaker
                     - Fire/Water
-            - Beta electric tiger line
+            - -Beta electric tiger line
                 - Kotora, Raitora
                     - Electric, Electric
             - Beta Farfetch'd evolution
                 - Madame - female only
                     - Normal(?)/Flying
-            - Beta Ghost line - They will evolve into each other every 10 levels
+            - -Beta Ghost line - They will evolve into each other every 10 levels
                 - Kurstraw, Pangshi
                     - Ghost/???, Ghost/???
-            - Beta Pinsir Evolution
+            - -Beta Pinsir Evolution
                 - Plux
                     - Bug/Dark
-            - Beta Ice wolf line
+            - -Beta Ice wolf line
                 - Wolfman, Warwolf
                     - Ice, Ice/Dark
-            - Beta Porygon2 - Branching evolution for Porygon
+            - Beta Porygon2 - Branching evolution for Porygon - Dubious Disc at Porygon
                 - Porygon-C
                     - Normal
         - https://tcrf.net/Proto:Pok%C3%A9mon_Gold_and_Silver/Spaceworld_1999_Demo/Pok%C3%A9mon
             - Beta Dunsparce - Baby Dunsparce?
                 - ???
                     - Normal
-            - Beta Sneasel
+            - -Beta Sneasel
                 - Swievel
                     - Ice/Normal
-            - Beta Celebi
+            - -Beta Celebi
                 - ???
                     - Steel/???
             - Beta Wooper - 
                 - ???
                     - Water/???
         - https://tcrf.net/Prerelease:Pok%C3%A9mon_Gold_and_Silver/Sprites/990613
-            - Beta Azumarill - Branching evolution for Marill
+            - -Beta Azumarill - Branching evolution for Marill
                 - ???
                     - Water/Fighting
             - Beta Gligar - Branching evolution for Gligar
@@ -225,13 +222,12 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
             - Beta Blissey - Branching evolution for Chansey
                 - Whimsey
                     - ???
-            - Beta Girafarig pre-evolution - Alternate design for previous
+            - -Beta Girafarig pre-evolution
                 - Twinz
                     - Ghost/Fairy
     - New incense items for use with beta baby mon.
         - Rich Incense - Meowsy
-            - Provides a Speed boost.
-            - An exotic-smelling incense that makes the holder move first occasionally.
+            - An exotic-smelling incense that makes the holder move first occasionally. (Quick Claw)
 ## Changes
 
 - Changes from Emerald
@@ -261,8 +257,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Binding damage does 1/16th damage each turn. (Gens 1 - 5)
     - Hidden Power uses IVs to determine power. (Gens 3 - 5)
     - Rough Skin/Iron Barb damage is 1/16th. (Gen 3)
-    - Dark Type Pokemon are no longer immune to moves affected by Prankster.
-        - Will try to nullify the boost from Prankster instead. (PENDING)
+    - Dark Type Pokemon are no longer immune to moves affected by Prankster. Dark types just nullify the priority boost.
     - Roost will make a pure Flying-type Pokemon typless instead of Normal.
     - Binding moves last for 2-5 turns. (Gens 1 - 4)
     - Uproar lasts for 2-5 turns. (Gens 3 & 4)

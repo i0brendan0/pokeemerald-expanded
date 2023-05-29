@@ -36,7 +36,8 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_ICE]                             = TILE_FLAG_UNUSED,
     [MB_SAND]                            = TILE_FLAG_UNUSED,
     [MB_SEAWEED]                         = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE | TILE_FLAG_HAS_ENCOUNTERS,
-    [MB_UNUSED_23]                       = TILE_FLAG_UNUSED,
+    [MB_DARK_WATER]                      = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE | TILE_FLAG_HAS_ENCOUNTERS,
+    [MB_DARK_GRASS]                      = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_ASHGRASS]                        = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_FOOTPRINTS]                      = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_THIN_ICE]                        = TILE_FLAG_UNUSED,
@@ -174,7 +175,7 @@ bool8 MetatileBehavior_IsJumpSouth(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsPokeGrass(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_TALL_GRASS || metatileBehavior == MB_LONG_GRASS)
+    if (metatileBehavior == MB_TALL_GRASS || metatileBehavior == MB_LONG_GRASS || metatileBehavior == MB_DARK_GRASS)
         return TRUE;
     else
         return FALSE;
@@ -742,6 +743,22 @@ bool8 MetatileBehavior_IsLongGrass(u8 metatileBehavior)
         return FALSE;
 }
 
+bool8 MetatileBehavior_IsDarkGrass(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_DARK_GRASS)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsDarkWater(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_DARK_WATER)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 bool8 MetatileBehavior_IsBerryTreeSoil(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_BERRY_TREE_SOIL)
@@ -1270,6 +1287,7 @@ bool8 MetatileBehavior_IsCuttableGrass(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_TALL_GRASS
      || metatileBehavior == MB_LONG_GRASS
+     || metatileBehavior == MB_DARK_GRASS
      || metatileBehavior == MB_ASHGRASS
      || metatileBehavior == MB_LONG_GRASS_SOUTH_EDGE)
         return TRUE;

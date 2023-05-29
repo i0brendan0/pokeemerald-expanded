@@ -32,6 +32,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
         - Splash
             - Water
             - Does damage during rain based on the user's weight.
+    - Swarming Pokemon may now hold other items. 
 
 ## New Features
 
@@ -210,7 +211,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
                 - ???
                     - Steel/???
             - Beta Wooper - 
-                - ???
+                - Woober
                     - Water/???
         - https://tcrf.net/Prerelease:Pok%C3%A9mon_Gold_and_Silver/Sprites/990613
             - -Beta Azumarill - Branching evolution for Marill
@@ -242,13 +243,16 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Pickup table has been modified.
         - Due to this change and that plenty of useful items are now possible to get from Pickup, some pokemon get the Pickup ability.
             - Vulpix line
-            - Phanpy line
             - Plusle and Minun
             - Starly line (change to just Starly)
             - Manaphy and Phione
     - Mew and Deoxys will behave normally regardless of how they were obtained.
     - The number of spots Feebas can be found has been doubled.
     - More bag space. 120 spots now.
+    - Ice - Resist Dragon and Ground
+    - Electric - Super effective to Steel
+    - Bug - Remove Fairy Resistance - Resist Psychic
+    - Poison - Super effective to Bug
 - Changes from the pokeemerald Expansion
     - Critical hits do 2x damage. (Gens 1 - 5)
     - Trainers give boosted EXP. (Gens 1 - 6)

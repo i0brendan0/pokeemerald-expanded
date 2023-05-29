@@ -32,11 +32,11 @@
 #define MB_SHOAL_CAVE_ENTRANCE 0x1C
 #define MB_UNUSED_1D 0x1D
 #define MB_UNUSED_1E 0x1E
-#define MB_UNUSED_1F 0x1F
+#define MB_DARK_WATER 0x1F
 #define MB_ICE 0x20
 #define MB_SAND 0x21
 #define MB_SEAWEED 0x22
-#define MB_UNUSED_23 0x23
+#define MB_DARK_GRASS 0x23
 #define MB_ASHGRASS 0x24
 #define MB_FOOTPRINTS 0x25
 #define MB_THIN_ICE 0x26

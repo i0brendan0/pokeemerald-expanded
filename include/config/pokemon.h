@@ -32,7 +32,7 @@
 // Forms are kept based on the base species, Eg: Meowth and Persian will keep all of their forms, but Perrserker will not be available if P_GEN_8_POKEMON is set to FALSE.
 // If you're disabling a generation previous to others (eg: Gen 5 but not Gen 6, 7 and 8),
 // remember to update NATIONAL_DEX enum in include/constants/pokedex.h to avoid players from softlocking in the non-existant entries.
-#define P_GEN_4_POKEMON             TRUE        // Generation 4 Pokémon (DPPt, HGSS)
+#define P_GEN_4_POKEMON             TRUE         // Generation 4 Pokémon (DPPt, HGSS)
 #define P_GEN_5_POKEMON             FALSE        // Generation 5 Pokémon (BW, B2W2)
 #define P_GEN_6_POKEMON             FALSE        // Generation 6 Pokémon (XY, ORAS)
 #define P_GEN_7_POKEMON             FALSE        // Generation 7 Pokémon (SM, USUM, LGPE)

@@ -653,24 +653,26 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
+// Type Trainer defeated flags. When set will boost damage done by that type.
+#define FLAG_NORMAL_TRAINER_DEFEATED    0x264
+#define FLAG_FIGHTING_TRAINER_DEFEATED  0x265
+#define FLAG_FLYING_TRAINER_DEFEATED    0x266
+#define FLAG_POISON_TRAINER_DEFEATED    0x267
+#define FLAG_GROUND_TRAINER_DEFEATED    0x268
+#define FLAG_ROCK_TRAINER_DEFEATED      0x269
+#define FLAG_BUG_TRAINER_DEFEATED       0x26A
+#define FLAG_GHOST_TRAINER_DEFEATED     0x26B
+#define FLAG_STEEL_TRAINER_DEFEATED     0x26C
+#define FLAG_FIRE_TRAINER_DEFEATED      0x26D
+#define FLAG_WATER_TRAINER_DEFEATED     0x26E
+#define FLAG_GRASS_TRAINER_DEFEATED     0x26F
+#define FLAG_ELECTRIC_TRAINER_DEFEATED  0x270
+#define FLAG_PSYCHIC_TRAINER_DEFEATED   0x271
+#define FLAG_ICE_TRAINER_DEFEATED       0x272
+#define FLAG_DRAGON_TRAINER_DEFEATED    0x273
+#define FLAG_DARK_TRAINER_DEFEATED      0x274
+#define FLAG_FAIRY_TRAINER_DEFEATED     0x275
+
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag

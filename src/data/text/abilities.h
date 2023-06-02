@@ -286,6 +286,20 @@ static const u8 sArmorTailDescription[] = _("Protects from priority.");
 static const u8 sEarthEaterDescription[] = _("Eats ground to heal HP.");
 static const u8 sMyceliumMightDescription[] = _("Status moves never fail.");
 static const u8 sCacophonyDescription[] = _("Makes sounds stronger.");
+static const u8 sNormalBoostDescription[] = _("Ups Normal moves in a pinch.");
+static const u8 sFightingBoostDescription[] = _("Ups Fighting moves in a pinch.");
+static const u8 sFlyingBoostDescription[] = _("Ups Flying moves in a pinch.");
+static const u8 sPoisonBoostDescription[] = _("Ups Poison moves in a pinch.");
+static const u8 sGroundBoostDescription[] = _("Ups Ground moves in a pinch.");
+static const u8 sRockBoostDescription[] = _("Ups Rock moves in a pinch.");
+static const u8 sGhostBoostDescription[] = _("Ups Ghost moves in a pinch.");
+static const u8 sSteelBoostDescription[] = _("Ups Steel moves in a pinch.");
+static const u8 sElectricBoostDescription[] = _("Ups Electric moves in a pinch.");
+static const u8 sPsychicBoostDescription[] = _("Ups Psychic moves in a pinch.");
+static const u8 sIceBoostDescription[] = _("Ups Ice moves in a pinch.");
+static const u8 sDragonBoostDescription[] = _("Ups Dragon moves in a pinch.");
+static const u8 sDarkBoostDescription[] = _("Ups Dark moves in a pinch.");
+static const u8 sFairyBoostDescription[] = _("Ups Fairy moves in a pinch.");
 
 #if B_EXPANDED_ABILITY_NAMES == TRUE
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -590,6 +604,20 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_EARTH_EATER] = _("Earth Eater"),
     [ABILITY_MYCELIUM_MIGHT] = _("Mycelium Might"),
     [ABILITY_CACOPHONY] = _("Cacophony"),
+    [ABILITY_STANDARD] = _("Standard"),
+    [ABILITY_WRESTLE] = _("Wrestle"),
+    [ABILITY_AIRBORNE] = _("Airborne"),
+    [ABILITY_VENOMOUS] = _("Venomous"),
+    [ABILITY_FOUNDATION] = _("Foundation"),
+    [ABILITY_RUBBLE] = _("Rubble"),
+    [ABILITY_PHANTASM] = _("Phantasm"),
+    [ABILITY_FORTIFY] = _("Fortify"),
+    [ABILITY_OVERCHARGE] = _("Overcharge"),
+    [ABILITY_MYSTIC] = _("Mystic"),
+    [ABILITY_CHILL] = _("Chill"),
+    [ABILITY_HYDRA] = _("Hydra"),
+    [ABILITY_DREAD] = _("Dread"),
+    [ABILITY_PIXIE] = _("Pixie"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -894,6 +922,20 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_EARTH_EATER] = _("Earth Eater"),
     [ABILITY_MYCELIUM_MIGHT] = _("MceliumMight"),
     [ABILITY_CACOPHONY] = _("Cacophony"),
+    [ABILITY_STANDARD] = _("Standard"),
+    [ABILITY_WRESTLE] = _("Wrestle"),
+    [ABILITY_AIRBORNE] = _("Airborne"),
+    [ABILITY_VENOMOUS] = _("Venomous"),
+    [ABILITY_FOUNDATION] = _("Foundation"),
+    [ABILITY_RUBBLE] = _("Rubble"),
+    [ABILITY_PHANTASM] = _("Phantasm"),
+    [ABILITY_FORTIFY] = _("Fortify"),
+    [ABILITY_OVERCHARGE] = _("Overcharge"),
+    [ABILITY_MYSTIC] = _("Mystic"),
+    [ABILITY_CHILL] = _("Chill"),
+    [ABILITY_HYDRA] = _("Hydra"),
+    [ABILITY_DREAD] = _("Dread"),
+    [ABILITY_PIXIE] = _("Pixie"),
 };
 #endif
 
@@ -1199,4 +1241,18 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_EARTH_EATER] = sEarthEaterDescription,
     [ABILITY_MYCELIUM_MIGHT] = sMyceliumMightDescription,
     [ABILITY_CACOPHONY] = sCacophonyDescription,
+    [ABILITY_STANDARD] = sNormalBoostDescription,
+    [ABILITY_WRESTLE] = sFightingBoostDescription,
+    [ABILITY_AIRBORNE] = sFlyingBoostDescription,
+    [ABILITY_VENOMOUS] = sPoisonBoostDescription,
+    [ABILITY_FOUNDATION] = sGroundBoostDescription,
+    [ABILITY_RUBBLE] = sRockBoostDescription,
+    [ABILITY_PHANTASM] = sGhostBoostDescription,
+    [ABILITY_FORTIFY] = sSteelBoostDescription,
+    [ABILITY_OVERCHARGE] = sElectricBoostDescription,
+    [ABILITY_MYSTIC] = sPsychicBoostDescription,
+    [ABILITY_CHILL] = sIceBoostDescription,
+    [ABILITY_HYDRA] = sDragonBoostDescription,
+    [ABILITY_DREAD] = sDarkBoostDescription,
+    [ABILITY_PIXIE] = sFairyBoostDescription,
 };

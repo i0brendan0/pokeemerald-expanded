@@ -1240,40 +1240,39 @@ static const u16 sPercentToModifier[] =
 };
 
 #define X UQ_4_12
-
+#define SUP 2.0
+#define NVE 0.5
+#define NOT 0.0
+#define NEU 1.0
 static const u16 sTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON_TYPES] =
 {
-//   normal  fight   flying  poison  ground  rock    bug     ghost   steel   mystery fire    water   grass  electric psychic ice     dragon  dark    fairy
-    {X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(0.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0)}, // normal
-    {X(2.0), X(1.0), X(0.5), X(0.5), X(1.0), X(2.0), X(0.5), X(0.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(2.0), X(1.0), X(2.0), X(0.5)}, // fight
-    {X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(0.5), X(2.0), X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(2.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0)}, // flying
-    {X(1.0), X(1.0), X(1.0), X(0.5), X(0.5), X(0.5), X(1.0), X(0.5), X(0.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0)}, // poison
-    {X(1.0), X(1.0), X(0.0), X(2.0), X(1.0), X(2.0), X(0.5), X(1.0), X(2.0), X(1.0), X(2.0), X(1.0), X(0.5), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0)}, // ground
-    {X(1.0), X(0.5), X(2.0), X(1.0), X(0.5), X(1.0), X(2.0), X(1.0), X(0.5), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0)}, // rock
-    {X(1.0), X(0.5), X(0.5), X(0.5), X(1.0), X(1.0), X(1.0), X(0.5), X(0.5), X(1.0), X(0.5), X(1.0), X(2.0), X(1.0), X(2.0), X(1.0), X(1.0), X(2.0), X(0.5)}, // bug
-    #if B_STEEL_RESISTANCES >= GEN_6
-    {X(0.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(0.5), X(1.0)}, // ghost
-    #else
-    {X(0.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(0.5), X(1.0)}, // ghost
-    #endif
-    {X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(0.5), X(1.0), X(0.5), X(0.5), X(1.0), X(0.5), X(1.0), X(2.0), X(1.0), X(1.0), X(2.0)}, // steel
-    {X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0)}, // mystery
-    {X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(2.0), X(1.0), X(2.0), X(1.0), X(0.5), X(0.5), X(2.0), X(1.0), X(1.0), X(2.0), X(0.5), X(1.0), X(1.0)}, // fire
-    {X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(0.5), X(0.5), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0)}, // water
-    {X(1.0), X(1.0), X(0.5), X(0.5), X(2.0), X(2.0), X(0.5), X(1.0), X(0.5), X(1.0), X(0.5), X(2.0), X(0.5), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0)}, // grass
-    {X(1.0), X(1.0), X(2.0), X(1.0), X(0.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(0.5), X(0.5), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0)}, // electric
-    {X(1.0), X(2.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0), X(0.0), X(1.0)}, // psychic
-    {X(1.0), X(1.0), X(2.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(0.5), X(0.5), X(2.0), X(1.0), X(1.0), X(0.5), X(2.0), X(1.0), X(1.0)}, // ice
-    {X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(0.0)}, // dragon
-    #if B_STEEL_RESISTANCES >= GEN_6
-    {X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(0.5), X(0.5)}, // dark
-    #else
-    {X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(0.5), X(0.5)}, // dark
-    #endif
-    {X(1.0), X(2.0), X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(2.0), X(1.0)}, // fairy
+//            normal fighting flying  poison  ground  rock    bug     ghost   steel   mystery fire    water   grass  electric psychic ice     dragon  dark    fairy
+/*normal*/   {X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NVE), X(NEU), X(NOT), X(NVE), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU)}, // normal
+/*fighting*/ {X(SUP), X(NEU), X(NVE), X(NVE), X(NEU), X(SUP), X(NVE), X(NOT), X(SUP), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NVE), X(SUP), X(NEU), X(SUP), X(NVE)}, // fight
+/*flying*/   {X(NEU), X(SUP), X(NEU), X(NEU), X(NEU), X(NVE), X(SUP), X(NEU), X(NVE), X(NEU), X(NEU), X(NEU), X(SUP), X(NVE), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU)}, // flying
+/*poison*/   {X(NEU), X(NEU), X(NEU), X(NVE), X(NVE), X(NVE), X(NEU), X(NVE), X(NOT), X(NEU), X(NEU), X(NEU), X(SUP), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(SUP)}, // poison
+/*ground*/   {X(NEU), X(NEU), X(NOT), X(SUP), X(NEU), X(SUP), X(NVE), X(NEU), X(SUP), X(NEU), X(SUP), X(NEU), X(NVE), X(SUP), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU)}, // ground
+/*rock*/     {X(NEU), X(NVE), X(SUP), X(NEU), X(NVE), X(NEU), X(SUP), X(NEU), X(NVE), X(NEU), X(SUP), X(NEU), X(NEU), X(NEU), X(NEU), X(SUP), X(NEU), X(NEU), X(NEU)}, // rock
+/*bug*/      {X(NEU), X(NVE), X(NVE), X(NVE), X(NEU), X(NEU), X(NEU), X(NVE), X(NVE), X(NEU), X(NVE), X(NEU), X(SUP), X(NEU), X(SUP), X(NEU), X(NEU), X(SUP), X(NVE)}, // bug
+/*ghost*/    {X(NOT), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(SUP), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(SUP), X(NEU), X(NEU), X(NVE), X(NEU)}, // ghost
+/*steel*/    {X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(SUP), X(NEU), X(NEU), X(NVE), X(NEU), X(NVE), X(NVE), X(NEU), X(NVE), X(NEU), X(SUP), X(NEU), X(NEU), X(SUP)}, // steel
+/*mystery*/  {X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU)}, // mystery
+/*fire*/     {X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NVE), X(SUP), X(NEU), X(SUP), X(NEU), X(NVE), X(NVE), X(SUP), X(NEU), X(NEU), X(SUP), X(NVE), X(NEU), X(NEU)}, // fire
+/*water*/    {X(NEU), X(NEU), X(NEU), X(NEU), X(SUP), X(SUP), X(NEU), X(NEU), X(NEU), X(NEU), X(SUP), X(NVE), X(NVE), X(NEU), X(NEU), X(NEU), X(NVE), X(NEU), X(NEU)}, // water
+/*grass*/    {X(NEU), X(NEU), X(NVE), X(NVE), X(SUP), X(SUP), X(NVE), X(NEU), X(NVE), X(NEU), X(NVE), X(SUP), X(NVE), X(NEU), X(NEU), X(NEU), X(NVE), X(NEU), X(NEU)}, // grass
+/*electric*/ {X(NEU), X(NEU), X(SUP), X(NEU), X(NOT), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(SUP), X(NVE), X(NVE), X(NEU), X(NEU), X(NVE), X(NEU), X(NEU)}, // electric
+/*psychic*/  {X(NEU), X(SUP), X(NEU), X(SUP), X(NEU), X(NEU), X(NEU), X(NEU), X(NVE), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NVE), X(NEU), X(NEU), X(NOT), X(NEU)}, // psychic
+/*ice*/      {X(NEU), X(NEU), X(SUP), X(NEU), X(SUP), X(NEU), X(NEU), X(NEU), X(NVE), X(NEU), X(NVE), X(NVE), X(SUP), X(NEU), X(NEU), X(NVE), X(SUP), X(NEU), X(NEU)}, // ice
+/*dragon*/   {X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NVE), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(SUP), X(NEU), X(NOT)}, // dragon
+/*dark*/     {X(NEU), X(NVE), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(SUP), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(SUP), X(NEU), X(NEU), X(NVE), X(NVE)}, // dark
+/*fairy*/    {X(NEU), X(SUP), X(NEU), X(NVE), X(NEU), X(NEU), X(NEU), X(NEU), X(NVE), X(NEU), X(NVE), X(NEU), X(NEU), X(NEU), X(NEU), X(NEU), X(SUP), X(SUP), X(NEU)}, // fairy
 };
 
 #undef X
+#undef SUP
+#undef NVE
+#undef NOT
+#undef NEU
 
 // code
 u8 GetBattlerForBattleScript(u8 caseId)
@@ -9196,12 +9195,35 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
 }
 #undef TERRAIN_TYPE_BOOST
 
+static const u16 sLowHPAbilities[NUMBER_OF_MON_TYPES] =
+{
+    [TYPE_NORMAL] = ABILITY_STANDARD,
+    [TYPE_FIGHTING] = ABILITY_WRESTLE,
+    [TYPE_FLYING] = ABILITY_AIRBORNE,
+    [TYPE_POISON] = ABILITY_VENOMOUS,
+    [TYPE_GROUND] = ABILITY_FOUNDATION,
+    [TYPE_ROCK] = ABILITY_RUBBLE,
+    [TYPE_BUG] = ABILITY_SWARM,
+    [TYPE_GHOST] = ABILITY_PHANTASM,
+    [TYPE_STEEL] = ABILITY_FORTIFY,
+    [TYPE_FIRE] = ABILITY_BLAZE,
+    [TYPE_WATER] = ABILITY_TORRENT,
+    [TYPE_GRASS] = ABILITY_OVERGROW,
+    [TYPE_ELECTRIC] = ABILITY_OVERCHARGE,
+    [TYPE_PSYCHIC] = ABILITY_MYSTIC,
+    [TYPE_ICE] = ABILITY_CHILL,
+    [TYPE_DRAGON] = ABILITY_HYDRA,
+    [TYPE_DARK] = ABILITY_DREAD,
+    [TYPE_FAIRY] = ABILITY_PIXIE,
+};
+
 static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 isCrit, bool32 updateFlags)
 {
     u8 atkStage;
     u32 atkStat;
     u16 modifier;
     u16 atkBaseSpeciesId;
+    u8 i;
 
     atkBaseSpeciesId = GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species);
 
@@ -9249,7 +9271,6 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
 
     // apply attack stat modifiers
     modifier = UQ_4_12(1.0);
-
     // attacker's abilities
     switch (GetBattlerAbility(battlerAtk))
     {
@@ -9277,7 +9298,7 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
         if (moveType == TYPE_FIRE && gBattleResources->flags->flags[battlerAtk] & RESOURCE_FLAG_FLASH_FIRE)
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
-    case ABILITY_SWARM:
+/*    case ABILITY_SWARM:
         if (moveType == TYPE_BUG && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
@@ -9292,7 +9313,32 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     case ABILITY_OVERGROW:
         if (moveType == TYPE_GRASS && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
             MulModifier(&modifier, UQ_4_12(1.5));
+        break; */
+    case ABILITY_SWARM:
+    case ABILITY_TORRENT:
+    case ABILITY_BLAZE:
+    case ABILITY_OVERGROW:
+    case ABILITY_STANDARD:
+    case ABILITY_WRESTLE:
+    case ABILITY_AIRBORNE:
+    case ABILITY_VENOMOUS:
+    case ABILITY_FOUNDATION:
+    case ABILITY_RUBBLE:
+    case ABILITY_PHANTASM:
+    case ABILITY_FORTIFY:
+    case ABILITY_OVERCHARGE:
+    case ABILITY_MYSTIC:
+    case ABILITY_CHILL:
+    case ABILITY_HYDRA:
+    case ABILITY_DREAD:
+    case ABILITY_PIXIE:
+        if (gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP /3))
+        {
+            if (GetBattlerAbility(battlerAtk) == sLowHPAbilities[moveType])
+                MulModifier(&modifier, UQ_4_12(1.5));
+        }
         break;
+
     #if B_PLUS_MINUS_INTERACTION >= GEN_5
     case ABILITY_PLUS:
         if (IS_MOVE_SPECIAL(move) && IsBattlerAlive(BATTLE_PARTNER(battlerAtk)))
@@ -9403,8 +9449,35 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     if (ShouldGetStatBadgeBoost(FLAG_BADGE07_GET, battlerAtk) && IS_MOVE_SPECIAL(move))
         MulModifier(&modifier, UQ_4_12(1.1));
 
+    // A boost to moves of each type can be obtained by defeating a trainer of the designated type.
+    // They are littered throughout the Hoenn region and can only be battled after the HoF.
+    if (FlagGet(sTypeToTrainer[moveType])
+        MulModifier(&modifier, UQ_4_12(1.1));
+    
     return ApplyModifier(modifier, atkStat);
 }
+
+static const u16 sTypeToTrainer[NUMBER_OF_MON_TYPES] =
+{
+    [TYPE_NORMAL] = FLAG_NORMAL_TRAINER_DEFEATED,
+    [TYPE_FIGHTING] = FLAG_FIGHTING_TRAINER_DEFEATED,
+    [TYPE_FLYING] = FLAG_FLYING_TRAINER_DEFEATED,
+    [TYPE_POISON] = FLAG_POISON_TRAINER_DEFEATED,
+    [TYPE_GROUND] = FLAG_GROUND_TRAINER_DEFEATED,
+    [TYPE_ROCK] = FLAG_ROCK_TRAINER_DEFEATED,
+    [TYPE_BUG] = FLAG_BUG_TRAINER_DEFEATED,
+    [TYPE_GHOST] = FLAG_GHOST_TRAINER_DEFEATED,
+    [TYPE_STEEL] = FLAG_STEEL_TRAINER_DEFEATED,
+    [TYPE_FIRE] = FLAG_FIRE_TRAINER_DEFEATED,
+    [TYPE_WATER] = FLAG_WATER_TRAINER_DEFEATED,
+    [TYPE_GRASS] = FLAG_GRASS_TRAINER_DEFEATED,
+    [TYPE_ELECTRIC] = FLAG_ELECTRIC_TRAINER_DEFEATED,
+    [TYPE_PSYCHIC] = FLAG_PSYCHIC_TRAINER_DEFEATED,
+    [TYPE_ICE] = FLAG_ICE_TRAINER_DEFEATED,
+    [TYPE_DRAGON] = FLAG_DRAGON_TRAINER_DEFEATED,
+    [TYPE_DARK] = FLAG_DARK_TRAINER_DEFEATED,
+    [TYPE_FAIRY] = FLAG_FAIRY_TRAINER_DEFEATED,
+};
 
 static bool32 CanEvolve(u32 species)
 {

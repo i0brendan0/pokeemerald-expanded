@@ -38,7 +38,9 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 
 - New Features (PENDING)
     - Castform gets a Sandy Form.
-    - Certain Pokemon have type changes.
+    - New low-hp type abilities.
+    - 18 trainers are scattered throughout Hoenn, one for each type. Defeating them will give a bonus to damage done by their type. 
+    - Certain Pokemon have type changes. To help decide if these changes are good or not, visit [this form](https://docs.google.com/forms/d/e/1FAIpQLScKd_1CYb4mHNBIM4shUubUGBgedT6iaY6hVtMExTkFXhBtIA/viewform?usp=share_link) to give me your thoughts on them.
         - Gen 1
             - Charizard
                 - Fire/Dragon
@@ -108,7 +110,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
             - Carnivine
                 - Grass/Dark
 
-    - Beta mon from previous generations.
+    - Beta mon from previous generations. To help me name the unnamed beta mon, visit [this form](https://docs.google.com/forms/d/e/1FAIpQLSd-yXdW80FGVM1yWF8cjuY3-7D_ypu1qKMQMfgrda5Lwbe7Ug/viewform?usp=share_link).
         - Gen 2 - https://tcrf.net/Proto:Pok%C3%A9mon_Gold_and_Silver/Spaceworld_1997_Demo/Pok%C3%A9mon
             - Beta Bayleef
                 - Blossomole
@@ -290,6 +292,44 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Landing on grass will show the grass sprites correctly.
     - Pokedex entries will not show without the Pokedex.
     - The snow weather has been fixed.
+- Shiny Color Changes
+    - PENDING
+        - Abra
+        - Articuno
+        - Blissey
+        - Burmy (All forms)
+        - Chingling
+        - Combusken
+        - Diglett
+        - Dugtrio
+        - Elekid
+        - Gabite
+        - Gastrodon
+        - Gengar
+        - Igglybuff
+        - Kadabra
+        - Kangaskhan
+        - Leafeon
+        - Mantyke
+        - Meowth
+        - Nidoqueen
+        - Persian
+        - Pichu
+        - Pikachu
+        - Plusle
+        - Poliwag
+        - Poliwhirl
+        - Scyther
+        - Shellos
+        - Skitty
+        - Smoochum
+        - Snorlax
+        - Sunkern
+        - Togepi
+        - Togetic
+        - Venonat
+        - Wormadam (All forms)
+        - Zapdos
 
 Use MODIFY to find changes for future.
     

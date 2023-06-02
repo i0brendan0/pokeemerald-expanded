@@ -306,6 +306,8 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
     u8 max;
     u8 range;
     u8 rand;
+    struct ObjectEvent *playerObjEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+    u32 metatileBehavior = MapGridGetMetatileBehaviorAt(playerObjEvent->currentCoords.x, playerObjEvent->currentCoords.y)
 
     if (LURE_STEP_COUNT == 0)
     {
@@ -319,6 +321,16 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
         {
             min = wildPokemon[wildMonIndex].maxLevel;
             max = wildPokemon[wildMonIndex].minLevel;
+        }
+        if (MetatileBehavior_IsDarkGrass(metatileBehavior) 
+         || MetatileBehavior_IsDarkWater(metatileBehavior))
+        {
+            min += min * 10 / 100;
+            max += max * 10 / 100;
+            if (min > MAX_LEVEL)
+                min = MAX_LEVEL;
+            if (max > MAX_LEVEL)
+                max = MAX_LEVEL;
         }
         range = max - min + 1;
         rand = Random() % range;

@@ -307,7 +307,7 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
     u8 range;
     u8 rand;
     struct ObjectEvent *playerObjEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
-    u32 metatileBehavior = MapGridGetMetatileBehaviorAt(playerObjEvent->currentCoords.x, playerObjEvent->currentCoords.y)
+    u32 metatileBehavior = MapGridGetMetatileBehaviorAt(playerObjEvent->currentCoords.x, playerObjEvent->currentCoords.y);
 
     if (LURE_STEP_COUNT == 0)
     {

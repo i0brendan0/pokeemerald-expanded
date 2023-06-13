@@ -734,7 +734,7 @@ static void BattleLoadOpponentMonSpriteGfxCustom(u16 species, bool8 isFemale, bo
 
 static bool8 IsCastformForm(species)
 {
-    if (species == SPECIES_CASTFORM_SUNNY || species == SPECIES_CASTFORM_RAINY || species == SPECIES_CASTFORM_SNOWY)
+    if (species == SPECIES_CASTFORM_SUNNY || species == SPECIES_CASTFORM_RAINY || species == SPECIES_CASTFORM_SNOWY || species == SPECIES_CASTFORM_SANDY)
         return TRUE;
 
     return FALSE;
@@ -756,6 +756,9 @@ static u8 GetCastformYCustom(species)
         break;
     case SPECIES_CASTFORM_SNOWY:
         ret = gCastformFrontSpriteCoords[CASTFORM_ICE].y_offset;
+        break;
+    case SPECIES_CASTFORM_SANDY:
+        ret = gCastformFrontSpriteCoords[CASTFORM_ROCK].y_offset;
         break;
     }
     return ret;

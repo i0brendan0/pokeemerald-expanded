@@ -13068,6 +13068,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_CASTFORM_SUNNY] = sAnims_Castform,
     [SPECIES_CASTFORM_RAINY] = sAnims_Castform,
     [SPECIES_CASTFORM_SNOWY] = sAnims_Castform,
+    [SPECIES_CASTFORM_SANDY] = sAnims_Castform,
     [SPECIES_DEOXYS_ATTACK] = sAnims_DeoxysAttack,
     [SPECIES_DEOXYS_DEFENSE] = sAnims_DeoxysDefense,
     [SPECIES_DEOXYS_SPEED] = sAnims_DeoxysSpeed,

@@ -97,11 +97,8 @@ u8 ScriptGiveMon(u16 species, u8 level, u16 item, u32 unused1, u32 unused2, u8 u
 u8 ScriptGiveEgg(u16 species)
 {
     struct Pokemon mon;
-    u8 isEgg;
 
     CreateEgg(&mon, species, TRUE);
-    isEgg = TRUE;
-    SetMonData(&mon, MON_DATA_IS_EGG, &isEgg);
 
     return GiveMonToPlayer(&mon);
 }

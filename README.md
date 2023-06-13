@@ -37,6 +37,13 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
 ## New Features
 
 - New Features (PENDING)
+    - Certain Pokemon will know moves as a baby just like Pichu and Volt Tackle. 
+        - Farfetch'd - Leek - Tailwind
+        - Chansey/Happiny - Lucky Punch - Mach Punch
+        - Cubone - Thick Club - Bone Rush
+        - Sneasel - Razor Claw - Night Slash
+        - Gligar - Razor Fang - Leech Life
+    - A baby egg lotto will be available. Basically an updated Odd Egg.
     - Castform gets a Sandy Form.
     - New low-hp type abilities.
     - 18 trainers are scattered throughout Hoenn, one for each type. Defeating them will give a bonus to damage done by their type. 
@@ -204,7 +211,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
                     - Normal
         - https://tcrf.net/Proto:Pok%C3%A9mon_Gold_and_Silver/Spaceworld_1999_Demo/Pok%C3%A9mon
             - Beta Dunsparce - Baby Dunsparce?
-                - ???
+                - Duneslet
                     - Normal
             - -Beta Sneasel
                 - Swievel
@@ -217,10 +224,10 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
                     - Water/???
         - https://tcrf.net/Prerelease:Pok%C3%A9mon_Gold_and_Silver/Sprites/990613
             - -Beta Azumarill - Branching evolution for Marill
-                - ???
+                - Kirorill
                     - Water/Fighting
             - Beta Gligar - Branching evolution for Gligar
-                - ???
+                - Stingbat
                     - Flying/???
             - Beta Blissey - Branching evolution for Chansey
                 - Whimsey
@@ -231,6 +238,12 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - New incense items for use with beta baby mon.
         - Rich Incense - Meowsy
             - An exotic-smelling incense that makes the holder move first occasionally. (Quick Claw)
+        - Flame Incense - Trifox/Minicorn/Puddi
+            - . (Charcoal)
+        - Grime Incense - Grimey
+            - . (Poison Barb?)
+        - Grass Incense - Tangel/Para
+        - Water Incense - Golpy
 ## Changes
 
 - Changes from Emerald
@@ -240,6 +253,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Pure Power now doubles Special Attack instead of Attack. To differentiate from Huge Power.
     - Minus now raises Attack instead of Special Attack. To differentiate from Plus.
     - Mr. Mime's name is changed to Barrierd.
+    - Mime Jr.'s name is changed to Barrie
     - Castform shows its shiny color when transformed.
     - Obedience is increased with each badge.
     - Pickup table has been modified.
@@ -255,6 +269,8 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Electric - Super effective to Steel
     - Bug - Remove Fairy Resistance - Resist Psychic
     - Poison - Super effective to Bug
+    - Wave Incense and Sea Incense have been combined into a singular Incense. It's now called the Water Incense.
+    - Rose Incense has been renamed. It's now called the Grass Incense.
 - Changes from the pokeemerald Expansion
     - Critical hits do 2x damage. (Gens 1 - 5)
     - Trainers give boosted EXP. (Gens 1 - 6)
@@ -331,7 +347,7 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
         - Wormadam (All forms)
         - Zapdos
 
-Use MODIFY to find changes for future.
+Use XMODIFYX to find changes for future.
     
 ### [Documentation on features can be found here for the pokeemerald Expansion](https://github.com/rh-hideout/pokeemerald-expansion/wiki)
 

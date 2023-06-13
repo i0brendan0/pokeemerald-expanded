@@ -1645,7 +1645,7 @@ static void TryStartRandomMassOutbreak(void)
     {
         for (i = 0; i < LAST_TVSHOW_IDX; i++)
         {
-            if (gSaveBlock1Ptr->tvShows[i].common.kind == TVSHOW_MASS_OUTBREAK) // MODIFY
+            if (gSaveBlock1Ptr->tvShows[i].common.kind == TVSHOW_MASS_OUTBREAK) // XMODIFYX
                 return;
         }
         if (!rbernoulli(1, 200))

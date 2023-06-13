@@ -79,7 +79,7 @@ BattleFrontier_Lounge7_EventScript_SeismicToss::
 
 BattleFrontier_Lounge7_EventScript_DreamEater::
 	setvar VAR_0x8008, 24
-	setvar VAR_0x8005, MOVE_DREAM_EATER
+	setvar VAR_0x8005, MOVE_DREAM_EATER @ XMODIFYX
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
@@ -103,25 +103,25 @@ BattleFrontier_Lounge7_EventScript_BodySlam::
 
 BattleFrontier_Lounge7_EventScript_RockSlide::
 	setvar VAR_0x8008, 48
-	setvar VAR_0x8005, MOVE_ROCK_SLIDE
+	setvar VAR_0x8005, MOVE_ROCK_SLIDE @ XMODIFYX
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
 BattleFrontier_Lounge7_EventScript_Counter::
 	setvar VAR_0x8008, 48
-	setvar VAR_0x8005, MOVE_COUNTER
+	setvar VAR_0x8005, MOVE_COUNTER @ XMODIFYX
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
 BattleFrontier_Lounge7_EventScript_ThunderWave::
 	setvar VAR_0x8008, 48
-	setvar VAR_0x8005, MOVE_THUNDER_WAVE
+	setvar VAR_0x8005, MOVE_THUNDER_WAVE @ XMODIFYX
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
 BattleFrontier_Lounge7_EventScript_SwordsDance::
 	setvar VAR_0x8008, 48
-	setvar VAR_0x8005, MOVE_SWORDS_DANCE
+	setvar VAR_0x8005, MOVE_SWORDS_DANCE @ XMODIFYX
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
@@ -221,13 +221,13 @@ BattleFrontier_Lounge7_EventScript_IcyWind::
 
 BattleFrontier_Lounge7_EventScript_Endure::
 	setvar VAR_0x8008, 48
-	setvar VAR_0x8005, MOVE_ENDURE
+	setvar VAR_0x8005, MOVE_ENDURE @ XMODIFYX
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
 BattleFrontier_Lounge7_EventScript_PsychUp::
 	setvar VAR_0x8008, 48
-	setvar VAR_0x8005, MOVE_PSYCH_UP
+	setvar VAR_0x8005, MOVE_PSYCH_UP @ XMODIFYX
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 

@@ -4213,7 +4213,7 @@ u8 Script_TryGainNewFanFromCounter(void)
 // -gSpecialVar_0x8004 is currently hosting a Deoxys form.
 // -The metatile behavior of the tile in front of the Player is MB_UNUSED_2C, MB_UNUSED_2D, MB_UNUSED_2E or MB_UNUSED_2F.
 // If these conditions aren't met, gSpecialVar_Result is set to FALSE meaning Deoxys' form didn't change.
-bool16 TryChangeDeoxysForm(void)
+void TryChangeDeoxysForm(void)
 {
     u16 baseSpecies = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES);
     u16 targetSpecies;

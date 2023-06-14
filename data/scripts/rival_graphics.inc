@@ -1,6 +1,7 @@
 Common_EventScript_SetupRivalGfxId::
-	goto_if_eq VAR_RESULT, MALE, EventScript_SetupRivalGfxIdFemale
-	goto_if_eq VAR_RESULT, FEMALE, EventScript_SetupRivalGfxIdMale
+	checkrivalgender
+	goto_if_eq VAR_RESULT, FEMALE, EventScript_SetupRivalGfxIdFemale
+	goto_if_eq VAR_RESULT, MALE, EventScript_SetupRivalGfxIdMale
 	end
 
 EventScript_SetupRivalGfxIdFemale::

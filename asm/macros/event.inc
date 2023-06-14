@@ -1735,6 +1735,11 @@
 	.2byte \quantity
 	.endm
 
+	@ Checks the rival's gender. Stores the result (MALE (0) or FEMALE (1)) in VAR_RESULT.
+	.macro checkrivalgender
+	.byte 0xe3
+	.endm
+
 
 @ Supplementary
 

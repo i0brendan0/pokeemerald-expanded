@@ -32,7 +32,9 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
         - Splash
             - Water
             - Does damage during rain based on the user's weight.
-    - Swarming Pokemon may now hold other items. 
+    - Swarming Pokemon may now hold other items.
+    - The Rival's gender can now be chosen. (Can't be renamed.)
+    - Castform gets a Sandy Form. (No sprite/design yet)
 
 ## New Features
 
@@ -44,7 +46,6 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
         - Sneasel - Razor Claw - Night Slash
         - Gligar - Razor Fang - Leech Life
     - A baby egg lotto will be available. Basically an updated Odd Egg.
-    - Castform gets a Sandy Form.
     - New low-hp type abilities.
     - 18 trainers are scattered throughout Hoenn, one for each type. Defeating them will give a bonus to damage done by their type. 
     - Certain Pokemon have type changes. To help decide if these changes are good or not, visit [this form](https://docs.google.com/forms/d/e/1FAIpQLScKd_1CYb4mHNBIM4shUubUGBgedT6iaY6hVtMExTkFXhBtIA/viewform?usp=share_link) to give me your thoughts on them.
@@ -244,6 +245,10 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
             - . (Poison Barb?)
         - Grass Incense - Tangel/Para
         - Water Incense - Golpy
+    - Ice - Resist Dragon and Ground
+    - Electric - Super effective to Steel
+    - Bug - Remove Fairy Resistance - Resist Psychic
+    - Poison - Super effective to Bug
 ## Changes
 
 - Changes from Emerald
@@ -260,17 +265,14 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
         - Due to this change and that plenty of useful items are now possible to get from Pickup, some pokemon get the Pickup ability.
             - Vulpix line
             - Plusle and Minun
-            - Starly line (change to just Starly)
+            - Starly
             - Manaphy and Phione
     - Mew and Deoxys will behave normally regardless of how they were obtained.
     - The number of spots Feebas can be found has been doubled.
     - More bag space. 120 spots now.
-    - Ice - Resist Dragon and Ground
-    - Electric - Super effective to Steel
-    - Bug - Remove Fairy Resistance - Resist Psychic
-    - Poison - Super effective to Bug
     - Wave Incense and Sea Incense have been combined into a singular Incense. It's now called the Water Incense.
     - Rose Incense has been renamed. It's now called the Grass Incense.
+    - Starting money has been changed to 5000.
 - Changes from the pokeemerald Expansion
     - Critical hits do 2x damage. (Gens 1 - 5)
     - Trainers give boosted EXP. (Gens 1 - 6)

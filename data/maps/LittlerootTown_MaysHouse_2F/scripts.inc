@@ -6,6 +6,7 @@ LittlerootTown_MaysHouse_2F_MapScripts::
 	.byte 0
 
 LittlerootTown_MaysHouse_2F_OnTransition:
+	call Common_EventScript_SetupRivalGfxId
 	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_CheckSetReadyToMeetMay
 	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_MaysHouse_2F_EventScript_CheckShouldUpdateMayPos
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
@@ -84,20 +85,39 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMayNorth::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
-	msgbox RivalsHouse_2F_Text_MayWhoAreYou, MSGBOX_DEFAULT
-	closemessage
+    checkrivalgender
+    call_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_2F_EventScript_MayWhoAreYou
+    call_if_eq VAR_RESULT, MALE, LittlerootTown_MaysHouse_2F_EventScript_BrendanWhoAreYou
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMayNorth
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCNorth
 	waitmovement 0
 	return
+
+LittlerootTown_MaysHouse_2F_EventScript_MayWhoAreYou::
+	msgbox RivalsHouse_2F_Text_MayWhoAreYou, MSGBOX_DEFAULT
+	closemessage
+    return
+
+LittlerootTown_MaysHouse_2F_EventScript_BrendanWhoAreYou::
+    checkplayergender
+    goto_if_eq VAR_RESULT, MALE, LittlerootTown_MaysHouse_2F_EventScript_BrendanWhoAreYouMale
+	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
+	closemessage
+    return
+    
+LittlerootTown_MaysHouse_2F_EventScript_BrendanWhoAreYouMale::
+	msgbox RivalsHouse_2F_Text_BrendanWhoAreYouMale, MSGBOX_DEFAULT
+	closemessage
+    return
 
 LittlerootTown_MaysHouse_2F_EventScript_MeetMaySouth::
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayApproachPlayerSouth
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
-	msgbox RivalsHouse_2F_Text_MayWhoAreYou, MSGBOX_DEFAULT
-	closemessage
+    checkrivalgender
+    call_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_2F_EventScript_MayWhoAreYou
+    call_if_eq VAR_RESULT, MALE, LittlerootTown_MaysHouse_2F_EventScript_BrendanWhoAreYou
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMaySouth
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCSouth
 	waitmovement 0
@@ -108,8 +128,9 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMayWest::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	msgbox RivalsHouse_2F_Text_MayWhoAreYou, MSGBOX_DEFAULT
-	closemessage
+    checkrivalgender
+    call_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_2F_EventScript_MayWhoAreYou
+    call_if_eq VAR_RESULT, MALE, LittlerootTown_MaysHouse_2F_EventScript_BrendanWhoAreYou
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCWest
 	waitmovement 0
 	return
@@ -119,8 +140,9 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMayEast::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
-	msgbox RivalsHouse_2F_Text_MayWhoAreYou, MSGBOX_DEFAULT
-	closemessage
+    checkrivalgender
+    call_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_2F_EventScript_MayWhoAreYou
+    call_if_eq VAR_RESULT, MALE, LittlerootTown_MaysHouse_2F_EventScript_BrendanWhoAreYou
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMayEast
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCEast
 	waitmovement 0
@@ -348,6 +370,26 @@ RivalsHouse_2F_Text_BrendanWhoAreYou:
 	.string "Dad, PROF. BIRCH, said that our new\n"
 	.string "next-door neighbor is a GYM LEADER's\l"
 	.string "kid, so I assumed you'd be a guy.\p"
+	.string "My name's BRENDAN.\n"
+	.string "So, hi, neighbor!\p"
+	.string "Huh? Hey, {PLAYER}, don't you have\n"
+	.string "a POKéMON?\p"
+	.string "Do you want me to go catch you one?\p"
+	.string "Aw, darn, I forgot…\p"
+	.string "I'm supposed to go help my dad catch\n"
+	.string "some wild POKéMON.\p"
+	.string "Some other time, okay?$"
+
+RivalsHouse_2F_Text_BrendanWhoAreYouMale:
+	.string "Hey!\n"
+	.string "You…\p"
+	.string "Who are you?\p"
+	.string "Oh, you're {PLAYER}, aren't you?\n"
+	.string "Moved in next door, right?\p"
+	.string "Hey, I'm a boy too.\p"
+	.string "Dad, PROF. BIRCH, said that our new\n"
+	.string "next-door neighbor is a GYM LEADER's\l"
+	.string "kid.\p"
 	.string "My name's BRENDAN.\n"
 	.string "So, hi, neighbor!\p"
 	.string "Huh? Hey, {PLAYER}, don't you have\n"

@@ -6,6 +6,7 @@ LittlerootTown_BrendansHouse_2F_MapScripts::
 	.byte 0
 
 LittlerootTown_BrendansHouse_2F_OnTransition:
+	call Common_EventScript_SetupRivalGfxId
 	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
 	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
@@ -85,8 +86,9 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanNorth::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
-	closemessage
+    checkrivalgender
+    call_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_2F_EventScript_MayWhoAreYou
+    call_if_eq VAR_RESULT, MALE, LittlerootTown_MaysHouse_2F_EventScript_BrendanWhoAreYou
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanNorth
 	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCNorth
 	waitmovement 0
@@ -97,8 +99,9 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanSouth::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
-	closemessage
+    checkrivalgender
+    call_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_2F_EventScript_MayWhoAreYou
+    call_if_eq VAR_RESULT, MALE, LittlerootTown_MaysHouse_2F_EventScript_BrendanWhoAreYou
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanSouth
 	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCSouth
 	waitmovement 0
@@ -109,8 +112,9 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanWest::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
-	closemessage
+    checkrivalgender
+    call_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_2F_EventScript_MayWhoAreYou
+    call_if_eq VAR_RESULT, MALE, LittlerootTown_MaysHouse_2F_EventScript_BrendanWhoAreYou
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanWest
 	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCWest
 	waitmovement 0
@@ -121,8 +125,9 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanEast::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
-	closemessage
+    checkrivalgender
+    call_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_2F_EventScript_MayWhoAreYou
+    call_if_eq VAR_RESULT, MALE, LittlerootTown_MaysHouse_2F_EventScript_BrendanWhoAreYou
 	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCEast
 	waitmovement 0
 	return

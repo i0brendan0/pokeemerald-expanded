@@ -1,5 +1,4 @@
 Common_EventScript_SetupRivalGfxId::
-	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, EventScript_SetupRivalGfxIdFemale
 	goto_if_eq VAR_RESULT, FEMALE, EventScript_SetupRivalGfxIdMale
 	end
@@ -13,9 +12,9 @@ EventScript_SetupRivalGfxIdMale::
 	return
 
 Common_EventScript_SetupRivalOnBikeGfxId::
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, EventScript_SetupRivalOnBikeGfxIdFemale
-	goto_if_eq VAR_RESULT, FEMALE, EventScript_SetupRivalOnBikeGfxIdMale
+	checkrivalgender
+	goto_if_eq VAR_RESULT, FEMALE, EventScript_SetupRivalOnBikeGfxIdFemale
+	goto_if_eq VAR_RESULT, MALE, EventScript_SetupRivalOnBikeGfxIdMale
 	end
 
 EventScript_SetupRivalOnBikeGfxIdFemale::

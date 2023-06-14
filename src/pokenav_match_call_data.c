@@ -83,7 +83,7 @@ struct MatchCallBirch {
 
 struct MatchCallRival {
     u8 type;
-    u8 playerGender;
+    u8 rivalGender;
     u16 flag;
     const u8 *desc;
     const u8 *name;
@@ -277,7 +277,7 @@ static const match_call_text_data_t sMayTextScripts[] = {
 static const struct MatchCallRival sMayMatchCallHeader =
 {
     .type = MC_TYPE_RIVAL,
-    .playerGender = MALE,
+    .rivalGender = FEMALE,
     .flag = FLAG_ENABLE_RIVAL_MATCH_CALL,
     .desc = gText_MayBrendanMatchCallDesc,
     .name = gText_ExpandedPlaceholder_May,
@@ -306,7 +306,7 @@ static const match_call_text_data_t sBrendanTextScripts[] = {
 static const struct MatchCallRival sBrendanMatchCallHeader =
 {
     .type = MC_TYPE_RIVAL,
-    .playerGender = FEMALE,
+    .rivalGender = MALE,
     .flag = FLAG_ENABLE_RIVAL_MATCH_CALL,
     .desc = gText_MayBrendanMatchCallDesc,
     .name = gText_ExpandedPlaceholder_Brendan,
@@ -767,7 +767,7 @@ static bool32 MatchCall_GetEnabled_Wally(match_call_t matchCall)
 
 static bool32 MatchCall_GetEnabled_Rival(match_call_t matchCall)
 {
-    if (matchCall.rival->playerGender != gSaveBlock2Ptr->playerGender)
+    if (matchCall.rival->rivalGender != gSaveBlock2Ptr->rivalGender)
         return FALSE;
     if (matchCall.rival->flag == 0xFFFF)
         return TRUE;

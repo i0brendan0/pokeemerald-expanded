@@ -455,7 +455,7 @@ static const u8 *ExpandPlaceholder_KunChan(void)
 
 static const u8 *ExpandPlaceholder_RivalName(void)
 {
-    if (gSaveBlock2Ptr->playerGender == MALE)
+    if (gSaveBlock2Ptr->rivalGender == FEMALE)
         return gText_ExpandedPlaceholder_May;
     else
         return gText_ExpandedPlaceholder_Brendan;

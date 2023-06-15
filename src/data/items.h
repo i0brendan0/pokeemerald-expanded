@@ -5289,7 +5289,7 @@ const struct Item gItems[] =
 
     [ITEM_SEA_INCENSE] =
     {
-        .name = _("Sea Incense"),
+        .name = _("Water Incense"),
         .itemId = ITEM_SEA_INCENSE,
         .price = 2000,
         .holdEffect = HOLD_EFFECT_WATER_POWER,
@@ -5357,12 +5357,12 @@ const struct Item gItems[] =
         .flingPower = 10,
     },
 
-    [ITEM_WAVE_INCENSE] =
+    [ITEM_RICH_INCENSE] =
     {
-        .name = _("Wave Incense"),
-        .itemId = ITEM_WAVE_INCENSE,
+        .name = _("Rich Incense"),
+        .itemId = ITEM_RICH_INCENSE,
         .price = 2000,
-        .holdEffect = HOLD_EFFECT_WATER_POWER,
+        .holdEffect = HOLD_EFFECT_QUICK_CLAW,
         .holdEffectParam = 20,
         .description = sWaveIncenseDesc,
         .pocket = POCKET_ITEMS,
@@ -5373,7 +5373,7 @@ const struct Item gItems[] =
 
     [ITEM_ROSE_INCENSE] =
     {
-        .name = _("Rose Incense"),
+        .name = _("Grass Incense"),
         .itemId = ITEM_ROSE_INCENSE,
         .price = 2000,
         .holdEffect = HOLD_EFFECT_GRASS_POWER,

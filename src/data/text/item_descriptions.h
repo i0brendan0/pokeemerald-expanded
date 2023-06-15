@@ -2137,9 +2137,9 @@ static const u8 sFullIncenseDesc[] = _(
     "move slower.");
 
 static const u8 sWaveIncenseDesc[] = _(
-    "A hold item that\n"
-    "slightly boosts\n"
-    "Water-type moves.");
+    "An incense that\n"
+    "makes the holder\n"
+    "move first often.");
 
 static const u8 sRoseIncenseDesc[] = _(
     "A hold item that\n"

@@ -151,5 +151,6 @@ bool8 MetatileBehavior_IsTrainerHillTimer(u8);
 bool8 MetatileBehavior_IsDarkGrass(u8);
 bool8 MetatileBehavior_IsDarkWater(u8);
 bool8 MetatileBehavior_IsDeoxysFormRock(u8);
+bool8 MetatileBehavior_IsHiddenTree(u8);
 
 #endif // GUARD_METATILE_BEHAVIOR_H

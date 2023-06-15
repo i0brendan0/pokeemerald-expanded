@@ -429,6 +429,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return EventScript_TrainerHillTimer;
     if (MetatileBehavior_IsDeoxysFormRock(metatileBehavior) == TRUE)
         return EventScript_ChangeDeoxysForm;
+    if (MetatileBehavior_IsHiddenTree(metatileBehavior) == TRUE)
+        return EventScript_HiddenTree;
 
     elevation = position->elevation;
     if (elevation == MapGridGetElevationAt(position->x, position->y))

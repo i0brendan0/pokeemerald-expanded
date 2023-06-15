@@ -537,3 +537,6 @@ gSpecials::
 	def_special SetTotemBoost
 	def_special TrySpecialOverworldEvo
     def_special TryChangeDeoxysForm
+    def_special TryGiveRandomBabyEgg
+    def_special FindHiddenTreeResult
+    def_special FindHiddenTreeItemOrPokemon

@@ -1430,3 +1430,10 @@ bool8 MetatileBehavior_IsDeoxysFormRock(u8 metatileBehavior)
         return FALSE;
 }
 
+bool8 MetatileBehavior_IsHiddenTree(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_HIDDEN_TREE)
+        return TRUE;
+    else
+        return FALSE;
+}

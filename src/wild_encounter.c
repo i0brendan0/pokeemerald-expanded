@@ -222,7 +222,7 @@ static u8 ChooseWildMonIndex_Land(void)
 }
 
 // ROCK_WILD_COUNT / WATER_WILD_COUNT
-static u8 ChooseWildMonIndex_WaterRock(void)
+u8 ChooseWildMonIndex_WaterRock(void)
 {
     u8 wildMonIndex = 0;
     bool8 swap = FALSE;
@@ -384,6 +384,26 @@ static u16 GetCurrentMapWildMonHeaderId(void)
                 i += alteringCaveId;
             }
 
+            return i;
+        }
+    }
+
+    return HEADER_NONE;
+}
+
+u16 GetSpecifiedMapWildMonHeaderId(u16 map)
+{
+    u16 i;
+
+    for (i = 0; ; i++)
+    {
+        const struct WildPokemonHeader *wildHeader = &gWildMonHeaders[i];
+        if (wildHeader->mapGroup == MAP_GROUP(UNDEFINED))
+            break;
+
+        if (gWildMonHeaders[i].mapGroup == (map >> 8) &&
+            gWildMonHeaders[i].mapNum == (map & 0xFF))
+        {
             return i;
         }
     }

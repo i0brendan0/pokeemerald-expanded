@@ -4337,3 +4337,122 @@ void TryGiveRandomBabyEgg(void)
 }
 
 static const u16 sHiddenTreeCommonItemList[] =
+{
+    ITEM_NONE,
+};
+
+static const u16 sHiddenTreeUniqueItemList[][4] =
+{
+    {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE}, // Route 101
+    {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE}, // Route 102
+    {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE}, // Route 103
+    {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE}, // Route 104
+    {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE}, // Route 115
+    {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE}, // Route 116
+    {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE}, // Route 121
+};
+
+static const u16 sGetHiddenTreeVarFromMap[][2] =
+{
+    {MAP_ROUTE101, VAR_HIDDEN_TREE_0x4091},
+    {MAP_ROUTE102, VAR_HIDDEN_TREE_0x409B},
+    {MAP_ROUTE103, VAR_HIDDEN_TREE_0x409D},
+    {MAP_ROUTE104, VAR_HIDDEN_TREE_0x40A1},
+    {MAP_ROUTE110, VAR_HIDDEN_TREE_0x40A8},
+    {MAP_ROUTE112, VAR_HIDDEN_TREE_0x40B8},
+    {MAP_ROUTE115, VAR_HIDDEN_TREE_0x40DC},
+    {MAP_ROUTE116, VAR_HIDDEN_TREE_0x40E5},
+    {MAP_ROUTE117, VAR_HIDDEN_TREE_0x40F7},
+    {MAP_ROUTE118, VAR_HIDDEN_TREE_0x40F8},
+    {MAP_ROUTE119, VAR_HIDDEN_TREE_0x40F9},
+    {MAP_ROUTE120, VAR_HIDDEN_TREE_0x40FA},
+    {MAP_ROUTE121, VAR_HIDDEN_TREE_0x40FB},
+    {MAP_ROUTE123, VAR_HIDDEN_TREE_0x40FC},
+};
+
+void SetHiddenTrees(void)
+{
+    u16 i, headerId, var, value, lvl;
+    u8 monNum = ChooseWildMonIndex_WaterRock();
+    u8 k;
+    const struct WildPokemonInfo *rockSmashMonsInfo;
+    
+    for (i = 0; i < ARRAY_COUNT(sGetHiddenTreeVarFromMap); i++)
+    {
+        var = sGetHiddenTreeVarFromMap[i][1];
+        if (VarGet(var) == 0)
+        {
+            if ((Random() & 1) == 0)
+            {
+                if ((Random() % 100) < 20) // 20% chance it grabs a specific item
+                {
+                    k = (Random() % 4);
+                    value = sHiddenTreeUniqueItemList[i][k];
+                }
+                else // random item from list
+                {
+                    value = (Random() % ARRAY_COUNT(sHiddenTreeCommonItemList));
+                }
+            }
+            else
+            {
+                headerId = GetSpecifiedMapWildMonHeaderId(sGetHiddenTreeVarFromMap[i][0]);
+                rockSmashMonsInfo = gWildMonHeaders[headerId].rockSmashMonsInfo;
+                value = rockSmashMonsInfo->wildPokemon[monNum].species;
+                lvl = rockSmashMonsInfo->wildPokemon[monNum].minLevel;
+                value = ((lvl << 10) || (value));
+            }
+            VarSet(var, value);
+        }
+    }
+}
+
+// Checks to see if the tree can give an item or a pokemon
+// VAR_RESULT TRUE if can get item/pokemon
+void FindHiddenTreeResult(void)
+{
+    u16 curMap = gSaveBlock1Ptr->location.mapNum;
+    u8 i;
+    
+    for (i = 0; i < ARRAY_COUNT(sGetHiddenTreeVarFromMap); i++)
+    {
+        if (curMap == sGetHiddenTreeVarFromMap[i][0])
+        {
+            if (VarGet(sGetHiddenTreeVarFromMap[i][1]) != 0)
+            {
+                gSpecialVar_0x8000 = VarGet(sGetHiddenTreeVarFromMap[i][1]);
+                gSpecialVar_Result = TRUE;
+                VarSet(sGetHiddenTreeVarFromMap[i][1], 0);
+                return;
+            }
+        }
+    }
+    gSpecialVar_Result = FALSE;
+}
+
+// Checks to see if the tree can give an item or a pokemon
+// VAR_RESULT FALSE if it has pokemon
+// VAR_8000 holds species
+// VAR_8001 holds level
+// VAR_RESULT TRUE if it has item
+// VAR_8000 holds item
+// VAR_8001 holds quanitity (always 1)
+void FindHiddenTreeItemOrPokemon(void)
+{
+    u16 value = (gSpecialVar_0x8000 & 0x3FF);
+    u8 lvl = ((gSpecialVar_0x8000 & (0x3F << 10)) >> 10);
+    
+    if (lvl == 0) // item
+    {
+        gSpecialVar_0x8000 = value;
+        gSpecialVar_0x8001 = 1;
+        gSpecialVar_Result = TRUE;
+    }
+    else // pokemon
+    {
+        gSpecialVar_0x8000 = value;
+        gSpecialVar_0x8001 = lvl;
+        gSpecialVar_Result = FALSE;
+    }
+}
+

@@ -1418,3 +1418,15 @@ bool8 MetatileBehavior_IsTrainerHillTimer(u8 metatileBehavior)
     else
         return FALSE;
 }
+
+bool8 MetatileBehavior_IsDeoxysFormRock(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_CHANGE_FORM_DEOXYS_NORMAL  ||
+        metatileBehavior == MB_CHANGE_FORM_DEOXYS_ATTACK  ||
+        metatileBehavior == MB_CHANGE_FORM_DEOXYS_DEFENSE ||
+        metatileBehavior == MB_CHANGE_FORM_DEOXYS_SPEED)
+        return TRUE;
+    else
+        return FALSE;
+}
+

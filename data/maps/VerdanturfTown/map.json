@@ -129,7 +129,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -189,8 +191,8 @@
     },
     {
       "type": "sign",
-      "x": 7,
-      "y": 3,
+      "x": 6,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "VerdanturfTown_EventScript_RusturfTunnelSign"

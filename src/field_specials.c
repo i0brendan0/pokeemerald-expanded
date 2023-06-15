@@ -4,6 +4,7 @@
 #include "battle_tower.h"
 #include "cable_club.h"
 #include "data.h"
+#include "daycare.h"
 #include "decoration.h"
 #include "diploma.h"
 #include "event_data.h"
@@ -53,6 +54,7 @@
 #include "constants/event_object_movement.h"
 #include "constants/field_effects.h"
 #include "constants/field_specials.h"
+#include "constants/flags.h"
 #include "constants/items.h"
 #include "constants/heal_locations.h"
 #include "constants/map_types.h"
@@ -67,6 +69,7 @@
 #include "constants/metatile_labels.h"
 #include "palette.h"
 #include "battle_util.h"
+#include "wild_encounter.h"
 #include "constants/metatile_behaviors.h"
 
 #define TAG_ITEM_ICON 5500
@@ -3565,13 +3568,12 @@ bool32 IsTrainerRegistered(void)
     return FALSE;
 }
 
-// Always returns FALSE
 bool32 ShouldDistributeEonTicket(void)
 {
     if (!VarGet(VAR_DISTRIBUTE_EON_TICKET))
-        return FALSE;
+        return TRUE;
 
-    return TRUE;
+    return FALSE;
 }
 
 #define tState data[0]

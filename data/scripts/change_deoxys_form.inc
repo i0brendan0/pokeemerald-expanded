@@ -1,4 +1,4 @@
-ChangeDeoxysForm::
+EventScript_ChangeDeoxysForm::
     lockall
     msgbox ChangeDeoxysForm_Text_Beginning, MSGBOX_YESNO
     compare VAR_RESULT, YES

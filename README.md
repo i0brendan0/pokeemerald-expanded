@@ -35,6 +35,8 @@ This hack is a personal upgrade/modification of the original Pokemon Emerald. It
     - Swarming Pokemon may now hold other items.
     - The Rival's gender can now be chosen. (Can't be renamed.)
     - Castform gets a Sandy Form. (No sprite/design yet)
+    - Hidden Trees. Hidden Grotto-like interactable trees where each day, a Pokemon or item may drop from the tree.
+        - All Hidden Tree Pokemon will have their hidden ability. 
 
 ## New Features
 
